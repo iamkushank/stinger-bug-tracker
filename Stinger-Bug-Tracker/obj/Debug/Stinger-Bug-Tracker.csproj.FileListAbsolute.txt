@@ -1,0 +1,11 @@
+D:\Road to victory\The British College\1st Semester\Advanced Software Engineering\Assignment\Stinger-Bug-Tracker\Stinger-Bug-Tracker\bin\Debug\Stinger-Bug-Tracker.exe.config
+D:\Road to victory\The British College\1st Semester\Advanced Software Engineering\Assignment\Stinger-Bug-Tracker\Stinger-Bug-Tracker\bin\Debug\Stinger-Bug-Tracker.exe
+D:\Road to victory\The British College\1st Semester\Advanced Software Engineering\Assignment\Stinger-Bug-Tracker\Stinger-Bug-Tracker\bin\Debug\Stinger-Bug-Tracker.pdb
+D:\Road to victory\The British College\1st Semester\Advanced Software Engineering\Assignment\Stinger-Bug-Tracker\Stinger-Bug-Tracker\obj\Debug\Stinger-Bug-Tracker.csprojResolveAssemblyReference.cache
+D:\Road to victory\The British College\1st Semester\Advanced Software Engineering\Assignment\Stinger-Bug-Tracker\Stinger-Bug-Tracker\obj\Debug\Stinger_Bug_Tracker.LoginForm.resources
+D:\Road to victory\The British College\1st Semester\Advanced Software Engineering\Assignment\Stinger-Bug-Tracker\Stinger-Bug-Tracker\obj\Debug\Stinger_Bug_Tracker.Properties.Resources.resources
+D:\Road to victory\The British College\1st Semester\Advanced Software Engineering\Assignment\Stinger-Bug-Tracker\Stinger-Bug-Tracker\obj\Debug\Stinger-Bug-Tracker.csproj.GenerateResource.Cache
+D:\Road to victory\The British College\1st Semester\Advanced Software Engineering\Assignment\Stinger-Bug-Tracker\Stinger-Bug-Tracker\obj\Debug\Stinger-Bug-Tracker.exe
+D:\Road to victory\The British College\1st Semester\Advanced Software Engineering\Assignment\Stinger-Bug-Tracker\Stinger-Bug-Tracker\obj\Debug\Stinger-Bug-Tracker.pdb
+D:\Road to victory\The British College\1st Semester\Advanced Software Engineering\Assignment\Stinger-Bug-Tracker\Stinger-Bug-Tracker\obj\Debug\Stinger_Bug_Tracker.RegisterForm.resources
+D:\Road to victory\The British College\1st Semester\Advanced Software Engineering\Assignment\Stinger-Bug-Tracker\Stinger-Bug-Tracker\obj\Debug\Stinger_Bug_Tracker.Dashboard.resources
