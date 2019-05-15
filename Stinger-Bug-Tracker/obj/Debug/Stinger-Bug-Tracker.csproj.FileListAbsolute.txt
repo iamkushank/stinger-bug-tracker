@@ -8,4 +8,10 @@ D:\Road to victory\The British College\1st Semester\Advanced Software Engineerin
 D:\Road to victory\The British College\1st Semester\Advanced Software Engineering\Assignment\Stinger-Bug-Tracker\Stinger-Bug-Tracker\obj\Debug\Stinger-Bug-Tracker.exe
 D:\Road to victory\The British College\1st Semester\Advanced Software Engineering\Assignment\Stinger-Bug-Tracker\Stinger-Bug-Tracker\obj\Debug\Stinger-Bug-Tracker.pdb
 D:\Road to victory\The British College\1st Semester\Advanced Software Engineering\Assignment\Stinger-Bug-Tracker\Stinger-Bug-Tracker\obj\Debug\Stinger_Bug_Tracker.RegisterForm.resources
-D:\Road to victory\The British College\1st Semester\Advanced Software Engineering\Assignment\Stinger-Bug-Tracker\Stinger-Bug-Tracker\obj\Debug\Stinger_Bug_Tracker.Dashboard.resources
+D:\Road to victory\The British College\1st Semester\Advanced Software Engineering\Assignment\Stinger-Bug-Tracker\Stinger-Bug-Tracker\obj\Debug\Stinger_Bug_Tracker.DashboardTester.resources
+D:\Road to victory\The British College\1st Semester\Advanced Software Engineering\Assignment\Stinger-Bug-Tracker\Stinger-Bug-Tracker\obj\Debug\Stinger_Bug_Tracker.DashboardProgrammer.resources
+D:\Road to victory\The British College\1st Semester\Advanced Software Engineering\Assignment\Stinger-Bug-Tracker\Stinger-Bug-Tracker\obj\Debug\Stinger_Bug_Tracker.AddbugForm.resources
+D:\Road to victory\The British College\1st Semester\Advanced Software Engineering\Assignment\Stinger-Bug-Tracker\Stinger-Bug-Tracker\obj\Debug\Stinger_Bug_Tracker.FixbugForm.resources
+D:\Road to victory\The British College\1st Semester\Advanced Software Engineering\Assignment\Stinger-Bug-Tracker\Stinger-Bug-Tracker\obj\Debug\Stinger_Bug_Tracker.ListbugForm.resources
+D:\Road to victory\The British College\1st Semester\Advanced Software Engineering\Assignment\Stinger-Bug-Tracker\Stinger-Bug-Tracker\obj\Debug\Stinger_Bug_Tracker.ProjectForm.resources
+D:\Road to victory\The British College\1st Semester\Advanced Software Engineering\Assignment\Stinger-Bug-Tracker\Stinger-Bug-Tracker\obj\Debug\Stinger_Bug_Tracker.ManageForm.resources

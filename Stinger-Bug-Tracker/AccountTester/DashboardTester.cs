@@ -1,0 +1,192 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+
+namespace Stinger_Bug_Tracker
+{
+    public partial class DashboardTester : Form
+    {
+        public DashboardTester()
+        {
+            InitializeComponent();
+        }
+
+        private void pictureBoxLogout_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void textBoxSearch_Enter(object sender, EventArgs e)
+        {
+            String search = textBoxSearch.Text;
+            if (search.ToLower().Trim().Equals("search for bugs"))
+            {
+                textBoxSearch.Text = "";
+                textBoxSearch.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBoxSearch_Leave(object sender, EventArgs e)
+        {
+            String search = textBoxSearch.Text;
+            if (search.ToLower().Trim().Equals("search for bugs") || search.Trim().Equals(""))
+            {
+                textBoxSearch.Text = "search for bugs";
+                textBoxSearch.ForeColor = Color.Gray;
+            }
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conn = new MySqlConnection("server=localhost;port=3306;username=root;password=;database=stinger_users_db");
+            DataTable dt = new DataTable();
+
+            MySqlDataAdapter SDA = new MySqlDataAdapter("SELECT * FROM members where id like " + int.Parse(textBoxSearch.Text), conn);
+            SDA.Fill(dt);
+
+            dataGridViewList.DataSource = dt;
+        }
+
+        private void DashboardTester_Load(object sender, EventArgs e)
+        {
+            MdiClient ctlMdi;
+
+            foreach (Control ctl in this.Controls)
+            {
+                try
+                {
+                    ctlMdi = (MdiClient)ctl;
+
+                    ctlMdi.BackColor = System.Drawing.Color.WhiteSmoke;
+                    buttonAddBug.Enabled = true;
+                }
+                catch (InvalidCastException exc)
+                {
+                }
+            }
+        }
+
+        AddbugForm abf;
+        private void buttonAddBug_Click(object sender, EventArgs e)
+        {
+            if (abf == null)
+            {
+                abf = new AddbugForm();
+                abf.MdiParent = this;
+                abf.FormClosed += abf_FormClosed;
+                abf.Show();
+            }
+            else
+            {
+                abf.Activate();
+            }
+        }
+
+        void abf_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            abf = null;
+            // throw new NotImplementedException();
+        }
+
+        ListbugForm lbf;
+        private void buttonListBug_Click(object sender, EventArgs e)
+        {
+            if (lbf == null)
+            {
+                lbf = new ListbugForm();
+                lbf.MdiParent = this;
+                lbf.FormClosed += lbf_FormClosed;
+                lbf.Show();
+            }
+            else
+            {
+                lbf.Activate();
+            }
+        }
+
+        void lbf_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        FixbugForm fbf;
+        private void buttonFixBug_Click(object sender, EventArgs e)
+        {
+            if (fbf == null)
+            {
+                fbf = new FixbugForm();
+                fbf.MdiParent = this;
+                fbf.FormClosed += fbf_FormClosed;
+                fbf.Show();
+            }
+            else
+            {
+                fbf.Activate();
+            }
+        }
+
+        void fbf_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        ProjectForm pf;
+        private void buttonProject_Click(object sender, EventArgs e)
+        {
+            if (pf == null)
+            {
+                pf = new ProjectForm();
+                pf.MdiParent = this;
+                pf.FormClosed += pf_FormClosed;
+                pf.Show();
+            }
+            else
+            {
+                pf.Activate();
+            }
+        }
+
+        void pf_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        ManageForm mf;
+        private void buttonManage_Click(object sender, EventArgs e)
+        {
+            if (mf == null)
+            {
+                mf = new ManageForm();
+                mf.MdiParent = this;
+                mf.FormClosed += mf_FormClosed;
+                mf.Show();
+            }
+            else
+            {
+                pf.Activate();
+            }
+        }
+
+        void mf_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void labelDisplayUname_MouseEnter(object sender, EventArgs e)
+        {
+            labelDisplayUname.ForeColor = Color.Yellow;
+        }
+
+        private void labelDisplayUname_MouseLeave(object sender, EventArgs e)
+        {
+            labelDisplayUname.ForeColor = Color.White;
+        }
+    }
+}

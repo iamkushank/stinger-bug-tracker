@@ -48,7 +48,7 @@ namespace Stinger_Bug_Tracker
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `username` = @usn AND `password`= @pass", db.getConnection());
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `members` WHERE `username` = @usn AND `password`= @pass", db.getConnection());
 
             command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = username;
             command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = password;
@@ -60,7 +60,7 @@ namespace Stinger_Bug_Tracker
             if (table.Rows.Count > 0)
             {
                 this.Hide();
-                Dashboard dashboard = new Dashboard();
+                DashboardTester dashboard = new DashboardTester();
                 dashboard.Show();
             }
             else

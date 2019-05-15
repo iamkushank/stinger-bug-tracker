@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Stinger_Bug_Tracker
 {
-    public partial class Dashboard : Form
+    public partial class ListbugForm : Form
     {
-        public Dashboard()
+        public ListbugForm()
         {
             InitializeComponent();
         }

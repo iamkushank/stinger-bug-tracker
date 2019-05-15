@@ -45,50 +45,104 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dashboard.cs">
+    <Compile Include="AccountTester\DashboardTester.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dashboard.Designer.cs">
-      <DependentUpon>Dashboard.cs</DependentUpon>
+    <Compile Include="AccountTester\DashboardTester.Designer.cs">
+      <DependentUpon>DashboardTester.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountProgrammer\DashboardProgrammer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountProgrammer\DashboardProgrammer.Designer.cs">
+      <DependentUpon>DashboardProgrammer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountTester\AddbugForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountTester\AddbugForm.Designer.cs">
+      <DependentUpon>AddbugForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DB.cs" />
-    <Compile Include="LoginForm.cs">
+    <Compile Include="AccountTester\FixbugForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="AccountTester\FixbugForm.Designer.cs">
+      <DependentUpon>FixbugForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountTester\ListbugForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountTester\ListbugForm.Designer.cs">
+      <DependentUpon>ListbugForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageForm.Designer.cs">
+      <DependentUpon>ManageForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegisterForm.cs">
+    <Compile Include="AccountTester\ProjectForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegisterForm.Designer.cs">
+    <Compile Include="AccountTester\ProjectForm.Designer.cs">
+      <DependentUpon>ProjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Dashboard.resx">
-      <DependentUpon>Dashboard.cs</DependentUpon>
+    <EmbeddedResource Include="AccountProgrammer\DashboardProgrammer.resx">
+      <DependentUpon>DashboardProgrammer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="AccountTester\AddbugForm.resx">
+      <DependentUpon>AddbugForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountTester\DashboardTester.resx">
+      <DependentUpon>DashboardTester.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountTester\FixbugForm.resx">
+      <DependentUpon>FixbugForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountTester\ListbugForm.resx">
+      <DependentUpon>ListbugForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountTester\ProjectForm.resx">
+      <DependentUpon>ProjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageForm.resx">
+      <DependentUpon>ManageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <EmbeddedResource Include="RegisterForm.resx">
+    <EmbeddedResource Include="Forms\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -100,7 +154,19 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="images\add-bug.png" />
+    <Content Include="images\developer-img.jpg" />
+    <Content Include="images\fix-bug.png" />
+    <Content Include="images\git-logo.png" />
+    <Content Include="images\help-png.png" />
+    <Content Include="images\list-bug.png" />
+    <Content Include="images\logout-png.png" />
+    <Content Include="images\manage-png.png" />
+    <Content Include="images\notification-png.png" />
     <Content Include="images\passwordicon.png" />
+    <Content Include="images\project-png.png" />
+    <Content Include="images\scan-bug.png" />
+    <Content Include="images\stinger-logo.png" />
     <Content Include="images\usericon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

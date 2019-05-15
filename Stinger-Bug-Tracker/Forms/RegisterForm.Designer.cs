@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBoxRole = new System.Windows.Forms.ComboBox();
+            this.labelGoToLogIn = new System.Windows.Forms.Label();
             this.buttonCreateAccount = new System.Windows.Forms.Button();
             this.textBoxPasswordConfirm = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
@@ -39,7 +41,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelClose = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.labelGoToLogIn = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -47,6 +48,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
+            this.panel1.Controls.Add(this.comboBoxRole);
             this.panel1.Controls.Add(this.labelGoToLogIn);
             this.panel1.Controls.Add(this.buttonCreateAccount);
             this.panel1.Controls.Add(this.textBoxPasswordConfirm);
@@ -61,6 +63,37 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(627, 589);
             this.panel1.TabIndex = 1;
+            // 
+            // comboBoxRole
+            // 
+            this.comboBoxRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxRole.ForeColor = System.Drawing.Color.Gray;
+            this.comboBoxRole.FormattingEnabled = true;
+            this.comboBoxRole.Items.AddRange(new object[] {
+            "Tester (default)",
+            "Programmer",
+            "Developer"});
+            this.comboBoxRole.Location = new System.Drawing.Point(318, 276);
+            this.comboBoxRole.Name = "comboBoxRole";
+            this.comboBoxRole.Size = new System.Drawing.Size(260, 41);
+            this.comboBoxRole.TabIndex = 203;
+            this.comboBoxRole.Text = "role";
+            this.comboBoxRole.Enter += new System.EventHandler(this.comboBoxRole_Enter);
+            this.comboBoxRole.Leave += new System.EventHandler(this.comboBoxRole_Leave);
+            // 
+            // labelGoToLogIn
+            // 
+            this.labelGoToLogIn.AutoSize = true;
+            this.labelGoToLogIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGoToLogIn.ForeColor = System.Drawing.Color.White;
+            this.labelGoToLogIn.Location = new System.Drawing.Point(235, 564);
+            this.labelGoToLogIn.Name = "labelGoToLogIn";
+            this.labelGoToLogIn.Size = new System.Drawing.Size(161, 13);
+            this.labelGoToLogIn.TabIndex = 201;
+            this.labelGoToLogIn.Text = "Already have an account? Login";
+            this.labelGoToLogIn.Click += new System.EventHandler(this.labelGoToLogIn_Click);
+            this.labelGoToLogIn.MouseEnter += new System.EventHandler(this.labelGoToLogIn_MouseEnter);
+            this.labelGoToLogIn.MouseLeave += new System.EventHandler(this.labelGoToLogIn_MouseLeave);
             // 
             // buttonCreateAccount
             // 
@@ -109,7 +142,7 @@
             this.textBoxUserName.Location = new System.Drawing.Point(52, 276);
             this.textBoxUserName.Multiline = true;
             this.textBoxUserName.Name = "textBoxUserName";
-            this.textBoxUserName.Size = new System.Drawing.Size(526, 40);
+            this.textBoxUserName.Size = new System.Drawing.Size(260, 40);
             this.textBoxUserName.TabIndex = 2;
             this.textBoxUserName.Text = "username";
             this.textBoxUserName.Enter += new System.EventHandler(this.textBoxUserName_Enter);
@@ -190,20 +223,6 @@
             this.label1.Text = "CREATE YOUR ACCOUNT";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelGoToLogIn
-            // 
-            this.labelGoToLogIn.AutoSize = true;
-            this.labelGoToLogIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGoToLogIn.ForeColor = System.Drawing.Color.White;
-            this.labelGoToLogIn.Location = new System.Drawing.Point(235, 565);
-            this.labelGoToLogIn.Name = "labelGoToLogIn";
-            this.labelGoToLogIn.Size = new System.Drawing.Size(161, 13);
-            this.labelGoToLogIn.TabIndex = 201;
-            this.labelGoToLogIn.Text = "Already have an account? Login";
-            this.labelGoToLogIn.Click += new System.EventHandler(this.labelGoToLogIn_Click);
-            this.labelGoToLogIn.MouseEnter += new System.EventHandler(this.labelGoToLogIn_MouseEnter);
-            this.labelGoToLogIn.MouseLeave += new System.EventHandler(this.labelGoToLogIn_MouseLeave);
-            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,5 +256,6 @@
         private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.TextBox textBoxLastName;
         private System.Windows.Forms.Label labelGoToLogIn;
+        private System.Windows.Forms.ComboBox comboBoxRole;
     }
 }

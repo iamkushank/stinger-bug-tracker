@@ -1,6 +1,6 @@
 ﻿namespace Stinger_Bug_Tracker
 {
-    partial class Dashboard
+    partial class ManageForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,15 +30,19 @@
         {
             this.SuspendLayout();
             // 
-            // Dashboard
+            // ManageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(765, 411);
+            this.BackColor = System.Drawing.Color.SkyBlue;
+            this.ClientSize = new System.Drawing.Size(967, 501);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Dashboard";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Dashboard";
+            this.Location = new System.Drawing.Point(0, 155);
+            this.MaximizeBox = false;
+            this.Name = "ManageForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Text = "ManageForm";
+            this.TopMost = true;
             this.ResumeLayout(false);
 
         }

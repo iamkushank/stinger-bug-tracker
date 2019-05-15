@@ -104,6 +104,26 @@ namespace Stinger_Bug_Tracker
             }
         }
 
+        private void comboBoxRole_Enter(object sender, EventArgs e)
+        {
+            String role = comboBoxRole.Text;
+            if (role.ToLower().Trim().Equals("role"))
+            {
+                comboBoxRole.Text = "";
+                comboBoxRole.ForeColor = Color.Black;
+            }
+        }
+
+        private void comboBoxRole_Leave(object sender, EventArgs e)
+        {
+            String role = comboBoxRole.Text;
+            if (role.ToLower().Trim().Equals("role") || role.Trim().Equals(""))
+            {
+                comboBoxRole.Text = "role";
+                comboBoxRole.ForeColor = Color.Gray;
+            }
+        }
+
         private void textBoxPassword_Enter(object sender, EventArgs e)
         {
             String password = textBoxPassword.Text;
@@ -168,13 +188,14 @@ namespace Stinger_Bug_Tracker
         {
             // add new users
             DB db = new DB();
-            MySqlCommand command = new MySqlCommand("INSERT INTO `users`(`firstname`, `lastname`, `emailaddress`, `username`, `password`) VALUES (@fn, @ln, @email, @usn, @pass)", db.getConnection());
+            MySqlCommand command = new MySqlCommand("INSERT INTO `members`(`firstname`, `lastname`, `emailaddress`, `username`, `password`, `role`) VALUES (@fn, @ln, @email, @usn, @pass, @role)", db.getConnection());
 
             command.Parameters.Add("@fn", MySqlDbType.VarChar).Value = textBoxFirstName.Text;
             command.Parameters.Add("@ln", MySqlDbType.VarChar).Value = textBoxLastName.Text;
             command.Parameters.Add("@email", MySqlDbType.VarChar).Value = textBoxEmail.Text;
             command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = textBoxUserName.Text;
             command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = textBoxPassword.Text;
+            command.Parameters.Add("@role", MySqlDbType.VarChar).Value = comboBoxRole.Text;
 
             // open the connection
             db.openConnection();
@@ -182,6 +203,7 @@ namespace Stinger_Bug_Tracker
             // check if the textboxes contains the default values
             if(!checkTextBoxesValues())
             {
+
                 // check if the password equals to the confirmed password
                 if(textBoxPassword.Text.Equals(textBoxPasswordConfirm.Text))
                 {
@@ -227,7 +249,7 @@ namespace Stinger_Bug_Tracker
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `username` = @usn", db.getConnection());
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `members` WHERE `username` = @usn", db.getConnection());
 
             command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = username;
 
@@ -254,8 +276,9 @@ namespace Stinger_Bug_Tracker
             String email = textBoxEmail.Text;
             String uname = textBoxUserName.Text;
             String pass = textBoxPassword.Text;
+            String role = comboBoxRole.Text;
 
-            if (fname.Equals("first name") || lname.Equals("last name") || email.Equals("email address") || uname.Equals("username") || pass.Equals("password"))
+            if (fname.Equals("first name") || lname.Equals("last name") || email.Equals("email address") || uname.Equals("username") || pass.Equals("password") || role.Equals("role"))
             {
                 return true;
             }
