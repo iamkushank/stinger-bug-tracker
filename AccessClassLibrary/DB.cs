@@ -1,14 +1,22 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
 
-namespace Stinger_Bug_Tracker
+namespace AccessClassLibrary
 {
-    class DB
+    public class DB
     {
+        public static string connectionstring
+        { 
+            get
+            {
+                return "server=localhost;port=3306;username=root;password=;database=stinger_users_db";
+            }
+        }
+
         MySqlConnection connection = new MySqlConnection("server=localhost;port=3306;username=root;password=;database=stinger_users_db");
 
         // function to open the connection
@@ -34,5 +42,6 @@ namespace Stinger_Bug_Tracker
         {
             return connection;
         }
+    
     }
 }

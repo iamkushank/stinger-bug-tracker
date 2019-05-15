@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AccessClassLibrary;
 
 namespace Stinger_Bug_Tracker
 {
@@ -59,6 +60,31 @@ namespace Stinger_Bug_Tracker
 
             if (table.Rows.Count > 0)
             {
+                /*
+                string role = UserClass.role(textBoxUsername.Text, textBoxPassword.Text);
+                MessageBox.Show(role);
+
+                if (role == "Tester (default)")
+                {
+                    this.Hide();
+                    DashboardTester dashboard = new DashboardTester();
+                   // dashboard. // ------------------------
+                    dashboard.Show();
+                }
+                else if (role == "Developer")
+                {
+                    this.Hide();
+                    DashboardTester dashboard = new DashboardTester();
+                    dashboard.Show();
+                }
+                else if (role == "Programmer")
+                {
+                    this.Hide();
+                    DashboardTester dashboard = new DashboardTester();
+                    dashboard.Show();
+                }
+                */
+
                 this.Hide();
                 DashboardTester dashboard = new DashboardTester();
                 dashboard.Show();

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using AccessClassLibrary;
 
 namespace Stinger_Bug_Tracker
 {

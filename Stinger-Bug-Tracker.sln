@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stinger-Bug-Tracker", "Stinger-Bug-Tracker\Stinger-Bug-Tracker.csproj", "{B34E23EF-F145-4A2B-9F8A-565D6456056A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessClassLibrary", "AccessClassLibrary\AccessClassLibrary.csproj", "{BF78177F-739D-4534-A700-B60DCEDE8E6E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{B34E23EF-F145-4A2B-9F8A-565D6456056A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B34E23EF-F145-4A2B-9F8A-565D6456056A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B34E23EF-F145-4A2B-9F8A-565D6456056A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF78177F-739D-4534-A700-B60DCEDE8E6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF78177F-739D-4534-A700-B60DCEDE8E6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF78177F-739D-4534-A700-B60DCEDE8E6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF78177F-739D-4534-A700-B60DCEDE8E6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

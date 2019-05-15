@@ -30,47 +30,43 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardTester));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelDisplayID = new System.Windows.Forms.Label();
             this.labelDisplayRole = new System.Windows.Forms.Label();
             this.labelDisplayUname = new System.Windows.Forms.Label();
+            this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridViewList = new System.Windows.Forms.DataGridView();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBoxSearch = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.pictureBoxNotification = new System.Windows.Forms.PictureBox();
-            this.buttonGithub = new System.Windows.Forms.Button();
-            this.pictureBoxLogout = new System.Windows.Forms.PictureBox();
-            this.buttonSearch = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
             this.buttonManage = new System.Windows.Forms.Button();
             this.buttonProject = new System.Windows.Forms.Button();
             this.buttonFixBug = new System.Windows.Forms.Button();
             this.buttonListBug = new System.Windows.Forms.Button();
             this.buttonAddBug = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dataGridViewList = new System.Windows.Forms.DataGridView();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.buttonSearch = new System.Windows.Forms.Button();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.buttonGithub = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.buttonSignout = new Stinger_Bug_Tracker.CircularButton();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewList)).BeginInit();
-            this.panel8.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNotification)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewList)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -96,6 +92,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(210, 673);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(74, 632);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 34);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // labelDisplayID
             // 
@@ -130,8 +138,21 @@
             this.labelDisplayUname.Size = new System.Drawing.Size(54, 18);
             this.labelDisplayUname.TabIndex = 6;
             this.labelDisplayUname.Text = "label4";
+            this.labelDisplayUname.Click += new System.EventHandler(this.labelDisplayUname_Click);
             this.labelDisplayUname.MouseEnter += new System.EventHandler(this.labelDisplayUname_MouseEnter);
             this.labelDisplayUname.MouseLeave += new System.EventHandler(this.labelDisplayUname_MouseLeave);
+            // 
+            // pictureBoxProfile
+            // 
+            this.pictureBoxProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxProfile.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxProfile.Image")));
+            this.pictureBoxProfile.Location = new System.Drawing.Point(12, 12);
+            this.pictureBoxProfile.Name = "pictureBoxProfile";
+            this.pictureBoxProfile.Size = new System.Drawing.Size(85, 77);
+            this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxProfile.TabIndex = 5;
+            this.pictureBoxProfile.TabStop = false;
+            this.pictureBoxProfile.Click += new System.EventHandler(this.pictureBoxProfile_Click);
             // 
             // panel13
             // 
@@ -177,215 +198,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(10, 58);
             this.panel4.TabIndex = 4;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(19)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(210, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(971, 10);
-            this.panel2.TabIndex = 1;
-            // 
-            // dataGridViewList
-            // 
-            this.dataGridViewList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewList.Location = new System.Drawing.Point(386, 175);
-            this.dataGridViewList.Name = "dataGridViewList";
-            this.dataGridViewList.Size = new System.Drawing.Size(782, 486);
-            this.dataGridViewList.TabIndex = 0;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel8.Controls.Add(this.panel9);
-            this.panel8.Controls.Add(this.panel3);
-            this.panel8.Controls.Add(this.pictureBoxNotification);
-            this.panel8.Controls.Add(this.buttonGithub);
-            this.panel8.Controls.Add(this.pictureBoxLogout);
-            this.panel8.Controls.Add(this.textBoxSearch);
-            this.panel8.Controls.Add(this.buttonSearch);
-            this.panel8.Controls.Add(this.label3);
-            this.panel8.Location = new System.Drawing.Point(210, 10);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(971, 144);
-            this.panel8.TabIndex = 0;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.Black;
-            this.panel9.Location = new System.Drawing.Point(969, 0);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(2, 145);
-            this.panel9.TabIndex = 14;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(19)))));
-            this.panel3.Controls.Add(this.pictureBoxLogo);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(53, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(114, 144);
-            this.panel3.TabIndex = 12;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(-1, 100);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 23);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Stinger";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(22, 122);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 18);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Bug Tracker";
-            // 
-            // textBoxSearch
-            // 
-            this.textBoxSearch.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSearch.ForeColor = System.Drawing.Color.Gray;
-            this.textBoxSearch.Location = new System.Drawing.Point(175, 94);
-            this.textBoxSearch.Multiline = true;
-            this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(444, 50);
-            this.textBoxSearch.TabIndex = 0;
-            this.textBoxSearch.Text = "search for bugs";
-            this.textBoxSearch.Enter += new System.EventHandler(this.textBoxSearch_Enter);
-            this.textBoxSearch.Leave += new System.EventHandler(this.textBoxSearch_Leave);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(173, 61);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 20);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "label1";
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.Black;
-            this.panel10.Location = new System.Drawing.Point(1179, 154);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(2, 514);
-            this.panel10.TabIndex = 14;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(19)))));
-            this.panel11.ForeColor = System.Drawing.SystemColors.Control;
-            this.panel11.Location = new System.Drawing.Point(211, 668);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(970, 5);
-            this.panel11.TabIndex = 15;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.Silver;
-            this.panel12.ForeColor = System.Drawing.SystemColors.Control;
-            this.panel12.Location = new System.Drawing.Point(211, 167);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(970, 1);
-            this.panel12.TabIndex = 15;
-            // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
-            this.pictureBoxLogo.Location = new System.Drawing.Point(-10, 6);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(139, 93);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxLogo.TabIndex = 4;
-            this.pictureBoxLogo.TabStop = false;
-            // 
-            // pictureBoxNotification
-            // 
-            this.pictureBoxNotification.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxNotification.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxNotification.Image")));
-            this.pictureBoxNotification.Location = new System.Drawing.Point(910, 6);
-            this.pictureBoxNotification.Name = "pictureBoxNotification";
-            this.pictureBoxNotification.Size = new System.Drawing.Size(25, 25);
-            this.pictureBoxNotification.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBoxNotification.TabIndex = 17;
-            this.pictureBoxNotification.TabStop = false;
-            // 
-            // buttonGithub
-            // 
-            this.buttonGithub.BackColor = System.Drawing.Color.LightGreen;
-            this.buttonGithub.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonGithub.FlatAppearance.BorderSize = 0;
-            this.buttonGithub.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonGithub.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGithub.ForeColor = System.Drawing.Color.Black;
-            this.buttonGithub.Image = ((System.Drawing.Image)(resources.GetObject("buttonGithub.Image")));
-            this.buttonGithub.Location = new System.Drawing.Point(692, 84);
-            this.buttonGithub.Name = "buttonGithub";
-            this.buttonGithub.Size = new System.Drawing.Size(270, 60);
-            this.buttonGithub.TabIndex = 6;
-            this.buttonGithub.UseVisualStyleBackColor = false;
-            // 
-            // pictureBoxLogout
-            // 
-            this.pictureBoxLogout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxLogout.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogout.Image")));
-            this.pictureBoxLogout.Location = new System.Drawing.Point(941, 4);
-            this.pictureBoxLogout.Name = "pictureBoxLogout";
-            this.pictureBoxLogout.Size = new System.Drawing.Size(25, 27);
-            this.pictureBoxLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBoxLogout.TabIndex = 16;
-            this.pictureBoxLogout.TabStop = false;
-            this.pictureBoxLogout.Click += new System.EventHandler(this.pictureBoxLogout_Click);
-            // 
-            // buttonSearch
-            // 
-            this.buttonSearch.BackColor = System.Drawing.Color.LightGray;
-            this.buttonSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonSearch.FlatAppearance.BorderSize = 0;
-            this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSearch.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSearch.ForeColor = System.Drawing.Color.Black;
-            this.buttonSearch.Image = ((System.Drawing.Image)(resources.GetObject("buttonSearch.Image")));
-            this.buttonSearch.Location = new System.Drawing.Point(620, 94);
-            this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(62, 50);
-            this.buttonSearch.TabIndex = 14;
-            this.buttonSearch.UseVisualStyleBackColor = false;
-            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(74, 632);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 34);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBoxProfile
-            // 
-            this.pictureBoxProfile.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxProfile.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxProfile.Image")));
-            this.pictureBoxProfile.Location = new System.Drawing.Point(12, 12);
-            this.pictureBoxProfile.Name = "pictureBoxProfile";
-            this.pictureBoxProfile.Size = new System.Drawing.Size(85, 77);
-            this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBoxProfile.TabIndex = 5;
-            this.pictureBoxProfile.TabStop = false;
             // 
             // buttonManage
             // 
@@ -477,10 +289,179 @@
             this.buttonAddBug.UseVisualStyleBackColor = true;
             this.buttonAddBug.Click += new System.EventHandler(this.buttonAddBug_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(19)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(210, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(971, 10);
+            this.panel2.TabIndex = 1;
+            // 
+            // dataGridViewList
+            // 
+            this.dataGridViewList.BackgroundColor = System.Drawing.Color.Khaki;
+            this.dataGridViewList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewList.GridColor = System.Drawing.Color.Khaki;
+            this.dataGridViewList.Location = new System.Drawing.Point(386, 175);
+            this.dataGridViewList.Name = "dataGridViewList";
+            this.dataGridViewList.Size = new System.Drawing.Size(782, 486);
+            this.dataGridViewList.TabIndex = 0;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.Black;
+            this.panel10.Location = new System.Drawing.Point(1179, 154);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(2, 514);
+            this.panel10.TabIndex = 14;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(19)))));
+            this.panel11.ForeColor = System.Drawing.SystemColors.Control;
+            this.panel11.Location = new System.Drawing.Point(211, 668);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(970, 5);
+            this.panel11.TabIndex = 15;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.Silver;
+            this.panel12.ForeColor = System.Drawing.SystemColors.Control;
+            this.panel12.Location = new System.Drawing.Point(211, 167);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(970, 1);
+            this.panel12.TabIndex = 15;
+            // 
+            // buttonSearch
+            // 
+            this.buttonSearch.BackColor = System.Drawing.Color.LightGray;
+            this.buttonSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSearch.FlatAppearance.BorderSize = 0;
+            this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSearch.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSearch.ForeColor = System.Drawing.Color.Black;
+            this.buttonSearch.Image = ((System.Drawing.Image)(resources.GetObject("buttonSearch.Image")));
+            this.buttonSearch.Location = new System.Drawing.Point(682, 94);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(62, 50);
+            this.buttonSearch.TabIndex = 14;
+            this.buttonSearch.UseVisualStyleBackColor = false;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
+            // 
+            // textBoxSearch
+            // 
+            this.textBoxSearch.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSearch.ForeColor = System.Drawing.Color.Gray;
+            this.textBoxSearch.Location = new System.Drawing.Point(175, 94);
+            this.textBoxSearch.Multiline = true;
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(506, 50);
+            this.textBoxSearch.TabIndex = 0;
+            this.textBoxSearch.Text = "search for bugs";
+            this.textBoxSearch.Enter += new System.EventHandler(this.textBoxSearch_Enter);
+            this.textBoxSearch.Leave += new System.EventHandler(this.textBoxSearch_Leave);
+            // 
+            // buttonGithub
+            // 
+            this.buttonGithub.BackColor = System.Drawing.Color.LightGreen;
+            this.buttonGithub.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonGithub.FlatAppearance.BorderSize = 0;
+            this.buttonGithub.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonGithub.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonGithub.ForeColor = System.Drawing.Color.Black;
+            this.buttonGithub.Image = ((System.Drawing.Image)(resources.GetObject("buttonGithub.Image")));
+            this.buttonGithub.Location = new System.Drawing.Point(758, 84);
+            this.buttonGithub.Name = "buttonGithub";
+            this.buttonGithub.Size = new System.Drawing.Size(204, 60);
+            this.buttonGithub.TabIndex = 6;
+            this.buttonGithub.UseVisualStyleBackColor = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(19)))));
+            this.panel3.Controls.Add(this.pictureBoxLogo);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Location = new System.Drawing.Point(53, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(114, 144);
+            this.panel3.TabIndex = 12;
+            // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
+            this.pictureBoxLogo.Location = new System.Drawing.Point(-10, 6);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(139, 93);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxLogo.TabIndex = 4;
+            this.pictureBoxLogo.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(-1, 100);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 23);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Stinger";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(22, 122);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 18);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Bug Tracker";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Black;
+            this.panel9.Location = new System.Drawing.Point(969, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(2, 145);
+            this.panel9.TabIndex = 14;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel8.Controls.Add(this.buttonSignout);
+            this.panel8.Controls.Add(this.panel9);
+            this.panel8.Controls.Add(this.panel3);
+            this.panel8.Controls.Add(this.buttonGithub);
+            this.panel8.Controls.Add(this.textBoxSearch);
+            this.panel8.Controls.Add(this.buttonSearch);
+            this.panel8.Location = new System.Drawing.Point(210, 10);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(971, 159);
+            this.panel8.TabIndex = 0;
+            // 
+            // buttonSignout
+            // 
+            this.buttonSignout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSignout.FlatAppearance.BorderSize = 0;
+            this.buttonSignout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSignout.Image = ((System.Drawing.Image)(resources.GetObject("buttonSignout.Image")));
+            this.buttonSignout.Location = new System.Drawing.Point(940, 2);
+            this.buttonSignout.Name = "buttonSignout";
+            this.buttonSignout.Size = new System.Drawing.Size(28, 28);
+            this.buttonSignout.TabIndex = 18;
+            this.buttonSignout.UseVisualStyleBackColor = true;
+            this.buttonSignout.Click += new System.EventHandler(this.buttonSignout_Click);
+            // 
             // DashboardTester
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(1181, 673);
             this.Controls.Add(this.panel12);
             this.Controls.Add(this.panel11);
@@ -497,16 +478,14 @@
             this.Load += new System.EventHandler(this.DashboardTester_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewList)).EndInit();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNotification)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogout)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -525,27 +504,25 @@
         private System.Windows.Forms.Label labelDisplayRole;
         private System.Windows.Forms.Label labelDisplayUname;
         private System.Windows.Forms.PictureBox pictureBoxProfile;
-        private System.Windows.Forms.Button buttonGithub;
         private System.Windows.Forms.DataGridView dataGridViewList;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button buttonProject;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Button buttonManage;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Button buttonSearch;
+        private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.Button buttonGithub;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBoxNotification;
-        private System.Windows.Forms.PictureBox pictureBoxLogout;
-        private System.Windows.Forms.TextBox textBoxSearch;
-        private System.Windows.Forms.Button buttonSearch;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Button buttonManage;
+        private System.Windows.Forms.Panel panel8;
+        private CircularButton buttonSignout;
 
     }
 }

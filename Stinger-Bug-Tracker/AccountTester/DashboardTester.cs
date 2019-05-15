@@ -18,7 +18,7 @@ namespace Stinger_Bug_Tracker
             InitializeComponent();
         }
 
-        private void pictureBoxLogout_Click(object sender, EventArgs e)
+        private void buttonSignout_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -51,6 +51,7 @@ namespace Stinger_Bug_Tracker
             MySqlDataAdapter SDA = new MySqlDataAdapter("SELECT * FROM members where id like " + int.Parse(textBoxSearch.Text), conn);
             SDA.Fill(dt);
 
+            dataGridViewList.Show();
             dataGridViewList.DataSource = dt;
         }
 
@@ -64,7 +65,7 @@ namespace Stinger_Bug_Tracker
                 {
                     ctlMdi = (MdiClient)ctl;
 
-                    ctlMdi.BackColor = System.Drawing.Color.WhiteSmoke;
+                    ctlMdi.BackColor = System.Drawing.Color.Khaki;
                     buttonAddBug.Enabled = true;
                 }
                 catch (InvalidCastException exc)
@@ -76,6 +77,8 @@ namespace Stinger_Bug_Tracker
         AddbugForm abf;
         private void buttonAddBug_Click(object sender, EventArgs e)
         {
+            dataGridViewList.Hide();
+            
             if (abf == null)
             {
                 abf = new AddbugForm();
@@ -98,6 +101,8 @@ namespace Stinger_Bug_Tracker
         ListbugForm lbf;
         private void buttonListBug_Click(object sender, EventArgs e)
         {
+            dataGridViewList.Hide();
+
             if (lbf == null)
             {
                 lbf = new ListbugForm();
@@ -113,12 +118,15 @@ namespace Stinger_Bug_Tracker
 
         void lbf_FormClosed(object sender, FormClosedEventArgs e)
         {
-            throw new NotImplementedException();
+            lbf = null;
+            //throw new NotImplementedException();
         }
 
         FixbugForm fbf;
         private void buttonFixBug_Click(object sender, EventArgs e)
         {
+            dataGridViewList.Hide();
+
             if (fbf == null)
             {
                 fbf = new FixbugForm();
@@ -134,12 +142,15 @@ namespace Stinger_Bug_Tracker
 
         void fbf_FormClosed(object sender, FormClosedEventArgs e)
         {
-            throw new NotImplementedException();
+            fbf = null;
+            //throw new NotImplementedException();
         }
 
         ProjectForm pf;
         private void buttonProject_Click(object sender, EventArgs e)
         {
+            dataGridViewList.Hide();
+
             if (pf == null)
             {
                 pf = new ProjectForm();
@@ -155,12 +166,15 @@ namespace Stinger_Bug_Tracker
 
         void pf_FormClosed(object sender, FormClosedEventArgs e)
         {
-            throw new NotImplementedException();
+            pf = null;
+            //throw new NotImplementedException();
         }
 
         ManageForm mf;
         private void buttonManage_Click(object sender, EventArgs e)
         {
+            dataGridViewList.Hide();
+
             if (mf == null)
             {
                 mf = new ManageForm();
@@ -170,13 +184,14 @@ namespace Stinger_Bug_Tracker
             }
             else
             {
-                pf.Activate();
+                mf.Activate();
             }
         }
 
         void mf_FormClosed(object sender, FormClosedEventArgs e)
         {
-            throw new NotImplementedException();
+            mf = null;
+            //throw new NotImplementedException();
         }
 
         private void labelDisplayUname_MouseEnter(object sender, EventArgs e)
@@ -187,6 +202,24 @@ namespace Stinger_Bug_Tracker
         private void labelDisplayUname_MouseLeave(object sender, EventArgs e)
         {
             labelDisplayUname.ForeColor = Color.White;
+        }
+
+        private void pictureBoxProfile_Click(object sender, EventArgs e)
+        {
+            ProfileForm profile = new ProfileForm();
+            profile.Show();
+        }
+
+        private void labelDisplayUname_Click(object sender, EventArgs e)
+        {
+            ProfileForm profile = new ProfileForm();
+            profile.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            AboutForm about = new AboutForm();
+            about.Show();
         }
     }
 }

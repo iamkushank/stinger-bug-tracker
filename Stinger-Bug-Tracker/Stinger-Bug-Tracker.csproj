@@ -45,17 +45,65 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Help page\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help page\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help page\aboutAddbug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help page\aboutAddbug.Designer.cs">
+      <DependentUpon>aboutAddbug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help page\aboutFixbug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help page\aboutFixbug.Designer.cs">
+      <DependentUpon>aboutFixbug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help page\aboutGitHub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help page\aboutGitHub.Designer.cs">
+      <DependentUpon>aboutGitHub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help page\aboutListbug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help page\aboutListbug.Designer.cs">
+      <DependentUpon>aboutListbug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help page\aboutManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help page\aboutManage.Designer.cs">
+      <DependentUpon>aboutManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help page\aboutProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help page\aboutProject.Designer.cs">
+      <DependentUpon>aboutProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help page\aboutSearchbug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help page\aboutSearchbug.Designer.cs">
+      <DependentUpon>aboutSearchbug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help page\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help page\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AccountTester\DashboardTester.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AccountTester\DashboardTester.Designer.cs">
       <DependentUpon>DashboardTester.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AccountProgrammer\DashboardProgrammer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AccountProgrammer\DashboardProgrammer.Designer.cs">
-      <DependentUpon>DashboardProgrammer.cs</DependentUpon>
     </Compile>
     <Compile Include="AccountTester\AddbugForm.cs">
       <SubType>Form</SubType>
@@ -63,7 +111,12 @@
     <Compile Include="AccountTester\AddbugForm.Designer.cs">
       <DependentUpon>AddbugForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DB.cs" />
+    <Compile Include="Profile\CircularPicturebox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Profile\CircularButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="AccountTester\FixbugForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,11 +135,17 @@
     <Compile Include="AccountTester\ListbugForm.Designer.cs">
       <DependentUpon>ListbugForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageForm.cs">
+    <Compile Include="AccountTester\ManageForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageForm.Designer.cs">
+    <Compile Include="AccountTester\ManageForm.Designer.cs">
       <DependentUpon>ManageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\ProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profile\ProfileForm.Designer.cs">
+      <DependentUpon>ProfileForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="AccountTester\ProjectForm.cs">
@@ -102,8 +161,17 @@
     <Compile Include="Forms\RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AccountProgrammer\DashboardProgrammer.resx">
-      <DependentUpon>DashboardProgrammer.cs</DependentUpon>
+    <EmbeddedResource Include="Help page\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help page\aboutAddbug.resx">
+      <DependentUpon>aboutAddbug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help page\aboutFixbug.resx">
+      <DependentUpon>aboutFixbug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help page\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AccountTester\AddbugForm.resx">
       <DependentUpon>AddbugForm.cs</DependentUpon>
@@ -123,8 +191,26 @@
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageForm.resx">
+    <EmbeddedResource Include="AccountTester\ManageForm.resx">
       <DependentUpon>ManageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help page\aboutGitHub.resx">
+      <DependentUpon>aboutGitHub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help page\aboutListbug.resx">
+      <DependentUpon>aboutListbug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help page\aboutManage.resx">
+      <DependentUpon>aboutManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help page\aboutProject.resx">
+      <DependentUpon>aboutProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help page\aboutSearchbug.resx">
+      <DependentUpon>aboutSearchbug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profile\ProfileForm.resx">
+      <DependentUpon>ProfileForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -152,21 +238,37 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\AccessClassLibrary\AccessClassLibrary.csproj">
+      <Project>{bf78177f-739d-4534-a700-b60dcede8e6e}</Project>
+      <Name>AccessClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="images\add-bug.png" />
+    <Content Include="images\Cancelbutton-png.png" />
+    <Content Include="images\developer-img-large.jpg" />
     <Content Include="images\developer-img.jpg" />
+    <Content Include="images\facebook-png.png" />
+    <Content Include="images\findingbugs-png.png" />
     <Content Include="images\fix-bug.png" />
+    <Content Include="images\git-logo-large.png" />
     <Content Include="images\git-logo.png" />
+    <Content Include="images\googleplus-png.png" />
     <Content Include="images\help-png.png" />
+    <Content Include="images\instagram-png.png" />
+    <Content Include="images\linkedin-png.png" />
+    <Content Include="images\list-bug-large.png" />
     <Content Include="images\list-bug.png" />
     <Content Include="images\logout-png.png" />
+    <Content Include="images\manage-png-large.png" />
     <Content Include="images\manage-png.png" />
-    <Content Include="images\notification-png.png" />
     <Content Include="images\passwordicon.png" />
+    <Content Include="images\project-png-large.png" />
     <Content Include="images\project-png.png" />
     <Content Include="images\scan-bug.png" />
     <Content Include="images\stinger-logo.png" />
+    <Content Include="images\twitter-png.png" />
     <Content Include="images\usericon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,0 +1,5 @@
+D:\Road to victory\The British College\1st Semester\Advanced Software Engineering\Assignment\Stinger-Bug-Tracker\AccessClassLibrary\bin\Debug\AccessClassLibrary.dll
+D:\Road to victory\The British College\1st Semester\Advanced Software Engineering\Assignment\Stinger-Bug-Tracker\AccessClassLibrary\bin\Debug\AccessClassLibrary.pdb
+D:\Road to victory\The British College\1st Semester\Advanced Software Engineering\Assignment\Stinger-Bug-Tracker\AccessClassLibrary\obj\Debug\AccessClassLibrary.csprojResolveAssemblyReference.cache
+D:\Road to victory\The British College\1st Semester\Advanced Software Engineering\Assignment\Stinger-Bug-Tracker\AccessClassLibrary\obj\Debug\AccessClassLibrary.dll
+D:\Road to victory\The British College\1st Semester\Advanced Software Engineering\Assignment\Stinger-Bug-Tracker\AccessClassLibrary\obj\Debug\AccessClassLibrary.pdb
