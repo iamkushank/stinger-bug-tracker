@@ -19,11 +19,11 @@ namespace AccessClassLibrary
                 bool result = false;
                 string txtsql = "";
                 if (Mode == 1)
-                    txtsql = "Insert into members (firstname, lastname, username, password, role) values (@fn, @ln, @usn, @pass, @role)";
+                    txtsql = "Insert into tbl_members (firstname, lastname, username, password, role) values (@fn, @ln, @usn, @pass, @role)";
                 if (Mode == 2)
-                    txtsql = "Update members set firstname=@fn, lastname=@ln, username=@usn,password=@pass,role=@role where id=@id";
+                    txtsql = "Update tbl_members set firstname=@fn, lastname=@ln, username=@usn,password=@pass,role=@role where id=@id";
                 if(Mode == 3)
-                    txtsql = "Delete from members where id=@id";
+                    txtsql = "Delete from tbl_members where id=@id";
 
                 MySqlCommand sc = new MySqlCommand(txtsql, cmd);
                 sc.CommandType = CommandType.Text;
@@ -59,7 +59,7 @@ namespace AccessClassLibrary
             try
             {
                 DataTable dt = new DataTable();
-                MySqlCommand sc = new MySqlCommand("Select * from members where username=@usn and password=@pass", cmd);
+                MySqlCommand sc = new MySqlCommand("Select * from tbl_members where username=@usn and password=@pass", cmd);
                 sc.CommandType = CommandType.Text;
                 sc.Parameters.AddWithValue("@usn", username);
                 sc.Parameters.AddWithValue("@pass", password);
@@ -89,7 +89,7 @@ namespace AccessClassLibrary
             try
             {
                 DataTable dt = new DataTable();
-                MySqlCommand sc = new MySqlCommand("Select * from members where username=@usn and password=@pass", cmd);
+                MySqlCommand sc = new MySqlCommand("Select * from tbl_members where username=@usn and password=@pass", cmd);
                 sc.CommandType = CommandType.Text;
                 sc.Parameters.AddWithValue("@usn", username);
                 sc.Parameters.AddWithValue("@pass", password);

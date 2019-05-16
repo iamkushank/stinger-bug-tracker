@@ -48,7 +48,7 @@ namespace Stinger_Bug_Tracker
             MySqlConnection conn = new MySqlConnection("server=localhost;port=3306;username=root;password=;database=stinger_users_db");
             DataTable dt = new DataTable();
 
-            MySqlDataAdapter SDA = new MySqlDataAdapter("SELECT * FROM members where id like " + int.Parse(textBoxSearch.Text), conn);
+            MySqlDataAdapter SDA = new MySqlDataAdapter("SELECT * FROM tbl_members where id like " + int.Parse(textBoxSearch.Text), conn);
             SDA.Fill(dt);
 
             dataGridViewList.Show();

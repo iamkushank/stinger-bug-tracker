@@ -189,7 +189,7 @@ namespace Stinger_Bug_Tracker
         {
             // add new users
             DB db = new DB();
-            MySqlCommand command = new MySqlCommand("INSERT INTO `members`(`firstname`, `lastname`, `emailaddress`, `username`, `password`, `role`) VALUES (@fn, @ln, @email, @usn, @pass, @role)", db.getConnection());
+            MySqlCommand command = new MySqlCommand("INSERT INTO `tbl_members`(`firstname`, `lastname`, `emailaddress`, `username`, `password`, `role`) VALUES (@fn, @ln, @email, @usn, @pass, @role)", db.getConnection());
 
             command.Parameters.Add("@fn", MySqlDbType.VarChar).Value = textBoxFirstName.Text;
             command.Parameters.Add("@ln", MySqlDbType.VarChar).Value = textBoxLastName.Text;
@@ -250,7 +250,7 @@ namespace Stinger_Bug_Tracker
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `members` WHERE `username` = @usn", db.getConnection());
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `tbl_members` WHERE `username` = @usn", db.getConnection());
 
             command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = username;
 

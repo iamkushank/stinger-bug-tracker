@@ -24,11 +24,11 @@ namespace Stinger_Bug_Tracker
             bool res = uc.ManageUser(0, textBoxFirstname.Text, textBoxlastname.Text, textBoxUsername.Text, textBoxPassword.Text, comboBoxRole.Text, 1);
             if (res == true)
             {
-                MessageBox.Show("User add successfully!!");
+                MessageBox.Show("A new user successfully added!!");
             }
             else
             {
-                MessageBox.Show("User added failed!!");
+                MessageBox.Show("Failed to add user!!");
             }
         }
 
@@ -37,11 +37,11 @@ namespace Stinger_Bug_Tracker
             bool res = uc.ManageUser(Int32.Parse(textBoxSearch.Text), textBoxFirstname.Text, textBoxlastname.Text, textBoxUsername.Text, textBoxPassword.Text, comboBoxRole.Text, 2);
             if (res == true)
             {
-                MessageBox.Show("User updated successfully!!");
+                MessageBox.Show("Update successful!!");
             }
             else
             {
-                MessageBox.Show("User updated failed!!");
+                MessageBox.Show("Update failed!!");
             }
         }
 
@@ -50,12 +50,17 @@ namespace Stinger_Bug_Tracker
             bool res = uc.ManageUser(Int32.Parse(textBoxSearch.Text), textBoxFirstname.Text, textBoxlastname.Text, textBoxUsername.Text, textBoxPassword.Text, comboBoxRole.Text, 3);
             if (res == true)
             {
-                MessageBox.Show("User deleted successfully!!");
+                MessageBox.Show("Successfully deleted the user!!");
             }
             else
             {
-                MessageBox.Show("User delete failed!!");
+                MessageBox.Show("Failed to delete the user!!");
             }
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

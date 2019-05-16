@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridViewList = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewList)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -39,12 +41,24 @@
             this.panel1.Size = new System.Drawing.Size(1, 476);
             this.panel1.TabIndex = 27;
             // 
+            // dataGridViewList
+            // 
+            this.dataGridViewList.BackgroundColor = System.Drawing.Color.Khaki;
+            this.dataGridViewList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewList.GridColor = System.Drawing.Color.Khaki;
+            this.dataGridViewList.Location = new System.Drawing.Point(179, 7);
+            this.dataGridViewList.Name = "dataGridViewList";
+            this.dataGridViewList.Size = new System.Drawing.Size(782, 486);
+            this.dataGridViewList.TabIndex = 28;
+            // 
             // ListbugForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(967, 501);
+            this.Controls.Add(this.dataGridViewList);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(0, 155);
@@ -54,6 +68,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ListbugForm";
             this.TopMost = true;
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewList)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -61,5 +76,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dataGridViewList;
     }
 }

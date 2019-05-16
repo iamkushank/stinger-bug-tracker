@@ -16,7 +16,7 @@ namespace Stinger_Bug_Tracker
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DashboardTester());
+            Application.Run(new LoginForm());
         }
     }
 }

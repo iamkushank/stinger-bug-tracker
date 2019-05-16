@@ -16,5 +16,10 @@ namespace Stinger_Bug_Tracker
         {
             InitializeComponent();
         }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

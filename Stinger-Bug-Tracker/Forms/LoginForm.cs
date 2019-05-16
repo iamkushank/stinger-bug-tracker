@@ -49,7 +49,7 @@ namespace Stinger_Bug_Tracker
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `members` WHERE `username` = @usn AND `password`= @pass", db.getConnection());
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `tbl_members` WHERE `username` = @usn AND `password`= @pass", db.getConnection());
 
             command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = username;
             command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = password;
