@@ -76,5 +76,25 @@ namespace Stinger_Bug_Tracker
                 textBoxSolutionid.ForeColor = Color.Gray;
             }
         }
+
+        private void buttonProjectid_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void buttonBugid_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void buttonSolutionid_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

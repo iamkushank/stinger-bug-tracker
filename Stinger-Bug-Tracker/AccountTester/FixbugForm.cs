@@ -82,11 +82,6 @@ namespace Stinger_Bug_Tracker
             }
         }
 
-        private void buttonClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void buttonBrowse_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
@@ -96,6 +91,11 @@ namespace Stinger_Bug_Tracker
                 //txtStudentImage.Text = openFileDialog1.FileName;
                 pictureBoxErrorSnapshot.Image = Image.FromFile(openFileDialog1.FileName);
             }  
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

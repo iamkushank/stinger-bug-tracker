@@ -37,6 +37,7 @@
             this.buttonBugid = new System.Windows.Forms.Button();
             this.textBoxSolutionid = new System.Windows.Forms.TextBox();
             this.buttonSolutionid = new System.Windows.Forms.Button();
+            this.buttonClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,6 +63,7 @@
             // buttonProjectid
             // 
             this.buttonProjectid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(19)))));
+            this.buttonProjectid.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonProjectid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonProjectid.Image = ((System.Drawing.Image)(resources.GetObject("buttonProjectid.Image")));
             this.buttonProjectid.Location = new System.Drawing.Point(125, 49);
@@ -69,6 +71,7 @@
             this.buttonProjectid.Size = new System.Drawing.Size(28, 28);
             this.buttonProjectid.TabIndex = 34;
             this.buttonProjectid.UseVisualStyleBackColor = false;
+            this.buttonProjectid.Click += new System.EventHandler(this.buttonProjectid_Click);
             // 
             // textBoxProjectid
             // 
@@ -97,6 +100,7 @@
             // buttonBugid
             // 
             this.buttonBugid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(19)))));
+            this.buttonBugid.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonBugid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBugid.Image = ((System.Drawing.Image)(resources.GetObject("buttonBugid.Image")));
             this.buttonBugid.Location = new System.Drawing.Point(125, 109);
@@ -104,6 +108,7 @@
             this.buttonBugid.Size = new System.Drawing.Size(28, 28);
             this.buttonBugid.TabIndex = 34;
             this.buttonBugid.UseVisualStyleBackColor = false;
+            this.buttonBugid.Click += new System.EventHandler(this.buttonBugid_Click);
             // 
             // textBoxSolutionid
             // 
@@ -120,6 +125,7 @@
             // buttonSolutionid
             // 
             this.buttonSolutionid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(19)))));
+            this.buttonSolutionid.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonSolutionid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSolutionid.Image = ((System.Drawing.Image)(resources.GetObject("buttonSolutionid.Image")));
             this.buttonSolutionid.Location = new System.Drawing.Point(125, 169);
@@ -127,6 +133,21 @@
             this.buttonSolutionid.Size = new System.Drawing.Size(28, 28);
             this.buttonSolutionid.TabIndex = 34;
             this.buttonSolutionid.UseVisualStyleBackColor = false;
+            this.buttonSolutionid.Click += new System.EventHandler(this.buttonSolutionid_Click);
+            // 
+            // buttonClose
+            // 
+            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(19)))));
+            this.buttonClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClose.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClose.Location = new System.Drawing.Point(48, 448);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(75, 30);
+            this.buttonClose.TabIndex = 44;
+            this.buttonClose.Text = "Close";
+            this.buttonClose.UseVisualStyleBackColor = false;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // ListbugForm
             // 
@@ -134,6 +155,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(967, 501);
+            this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.buttonSolutionid);
             this.Controls.Add(this.buttonBugid);
             this.Controls.Add(this.buttonProjectid);
@@ -166,5 +188,6 @@
         private System.Windows.Forms.Button buttonBugid;
         private System.Windows.Forms.TextBox textBoxSolutionid;
         private System.Windows.Forms.Button buttonSolutionid;
+        private System.Windows.Forms.Button buttonClose;
     }
 }

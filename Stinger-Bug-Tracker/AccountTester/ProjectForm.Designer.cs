@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProjectForm));
             this.buttonExit = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
@@ -40,15 +41,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.labelDate = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBoxProjectid = new System.Windows.Forms.TextBox();
             this.txtRichDescription = new System.Windows.Forms.RichTextBox();
+            this.buttonSearch = new System.Windows.Forms.Button();
+            this.textBoxPidSearch = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // buttonExit
             // 
             this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(19)))));
+            this.buttonExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExit.Location = new System.Drawing.Point(728, 410);
@@ -57,10 +58,12 @@
             this.buttonExit.TabIndex = 53;
             this.buttonExit.Text = "Exit";
             this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // buttonDelete
             // 
             this.buttonDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(19)))));
+            this.buttonDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDelete.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDelete.Location = new System.Drawing.Point(728, 361);
@@ -69,10 +72,12 @@
             this.buttonDelete.TabIndex = 54;
             this.buttonDelete.Text = "Delete";
             this.buttonDelete.UseVisualStyleBackColor = false;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // buttonUpdate
             // 
             this.buttonUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(19)))));
+            this.buttonUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUpdate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUpdate.Location = new System.Drawing.Point(728, 312);
@@ -81,10 +86,12 @@
             this.buttonUpdate.TabIndex = 55;
             this.buttonUpdate.Text = "Update";
             this.buttonUpdate.UseVisualStyleBackColor = false;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // buttonAdd
             // 
             this.buttonAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(19)))));
+            this.buttonAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAdd.Location = new System.Drawing.Point(728, 263);
@@ -169,36 +176,6 @@
             this.panel1.Size = new System.Drawing.Size(1, 476);
             this.panel1.TabIndex = 57;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(19)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(323, 13);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 27);
-            this.button1.TabIndex = 60;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(194, 17);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(25, 20);
-            this.label3.TabIndex = 59;
-            this.label3.Text = "ID";
-            // 
-            // textBoxProjectid
-            // 
-            this.textBoxProjectid.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxProjectid.Location = new System.Drawing.Point(234, 14);
-            this.textBoxProjectid.Name = "textBoxProjectid";
-            this.textBoxProjectid.Size = new System.Drawing.Size(89, 26);
-            this.textBoxProjectid.TabIndex = 58;
-            // 
             // txtRichDescription
             // 
             this.txtRichDescription.Location = new System.Drawing.Point(439, 288);
@@ -207,16 +184,39 @@
             this.txtRichDescription.TabIndex = 61;
             this.txtRichDescription.Text = "";
             // 
+            // buttonSearch
+            // 
+            this.buttonSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(19)))));
+            this.buttonSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSearch.Image = ((System.Drawing.Image)(resources.GetObject("buttonSearch.Image")));
+            this.buttonSearch.Location = new System.Drawing.Point(268, 13);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(28, 28);
+            this.buttonSearch.TabIndex = 64;
+            this.buttonSearch.UseVisualStyleBackColor = false;
+            // 
+            // textBoxPidSearch
+            // 
+            this.textBoxPidSearch.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPidSearch.ForeColor = System.Drawing.Color.Gray;
+            this.textBoxPidSearch.Location = new System.Drawing.Point(179, 14);
+            this.textBoxPidSearch.Name = "textBoxPidSearch";
+            this.textBoxPidSearch.Size = new System.Drawing.Size(89, 26);
+            this.textBoxPidSearch.TabIndex = 63;
+            this.textBoxPidSearch.Text = "project id";
+            this.textBoxPidSearch.Enter += new System.EventHandler(this.textBoxPidSearch_Enter);
+            this.textBoxPidSearch.Leave += new System.EventHandler(this.textBoxPidSearch_Leave);
+            // 
             // ProjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(967, 501);
+            this.Controls.Add(this.buttonSearch);
+            this.Controls.Add(this.textBoxPidSearch);
             this.Controls.Add(this.txtRichDescription);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBoxProjectid);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonDelete);
@@ -256,9 +256,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelDate;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxProjectid;
         private System.Windows.Forms.RichTextBox txtRichDescription;
+        private System.Windows.Forms.Button buttonSearch;
+        private System.Windows.Forms.TextBox textBoxPidSearch;
     }
 }

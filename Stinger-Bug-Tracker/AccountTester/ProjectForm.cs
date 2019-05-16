@@ -19,22 +19,42 @@ namespace Stinger_Bug_Tracker
             InitializeComponent();
         }
 
+        private void textBoxPidSearch_Enter(object sender, EventArgs e)
+        {
+            String searchProjectid = textBoxPidSearch.Text;
+            if (searchProjectid.ToLower().Trim().Equals("project id"))
+            {
+                textBoxPidSearch.Text = "";
+                textBoxPidSearch.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBoxPidSearch_Leave(object sender, EventArgs e)
+        {
+            String searchProjectid = textBoxPidSearch.Text;
+            if (searchProjectid.ToLower().Trim().Equals("project id") || searchProjectid.Trim().Equals(""))
+            {
+                textBoxPidSearch.Text = "project id";
+                textBoxPidSearch.ForeColor = Color.Gray;
+            }
+        }
+
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             bool res = pc.ManageProjects(0, textBoxProject.Text, dtpStartdate.Text, dtpEnddate.Text, txtRichDescription.Text, 1);
             if (res == true)
             {
-                MessageBox.Show("A new user successfully added!!");
+                MessageBox.Show("A new project successfully added!!");
             }
             else
             {
-                MessageBox.Show("Failed to add user!!");
+                MessageBox.Show("Failed to add project!!");
             }
         }
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            bool res = pc.ManageProjects(Int32.Parse(textBoxProjectid.Text), textBoxProject.Text, dtpStartdate.Text, dtpEnddate.Text, txtRichDescription.Text, 2);
+            bool res = pc.ManageProjects(Int32.Parse(textBoxPidSearch.Text), textBoxProject.Text, dtpStartdate.Text, dtpEnddate.Text, txtRichDescription.Text, 2);
             if (res == true)
             {
                 MessageBox.Show("Update successful!!");
@@ -47,14 +67,14 @@ namespace Stinger_Bug_Tracker
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            bool res = pc.ManageProjects(Int32.Parse(textBoxProjectid.Text), textBoxProject.Text, dtpStartdate.Text, dtpEnddate.Text, txtRichDescription.Text, 3);
+            bool res = pc.ManageProjects(Int32.Parse(textBoxPidSearch.Text), textBoxProject.Text, dtpStartdate.Text, dtpEnddate.Text, txtRichDescription.Text, 3);
             if (res == true)
             {
-                MessageBox.Show("Successfully deleted the user!!");
+                MessageBox.Show("Successfully deleted the project!!");
             }
             else
             {
-                MessageBox.Show("Failed to delete the user!!");
+                MessageBox.Show("Failed to delete the project!!");
             }
         }
 

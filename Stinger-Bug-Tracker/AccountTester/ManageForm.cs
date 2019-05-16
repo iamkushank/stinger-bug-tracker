@@ -19,6 +19,26 @@ namespace Stinger_Bug_Tracker
             InitializeComponent();
         }
 
+        private void textBoxSearch_Enter(object sender, EventArgs e)
+        {
+            String searchUserid = textBoxUidSearch.Text;
+            if (searchUserid.ToLower().Trim().Equals("member id"))
+            {
+                textBoxUidSearch.Text = "";
+                textBoxUidSearch.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBoxSearch_Leave(object sender, EventArgs e)
+        {
+            String searchUserid = textBoxUidSearch.Text;
+            if (searchUserid.ToLower().Trim().Equals("member id") || searchUserid.Trim().Equals(""))
+            {
+                textBoxUidSearch.Text = "member id";
+                textBoxUidSearch.ForeColor = Color.Gray;
+            }
+        }
+
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             bool res = uc.ManageUser(0, textBoxFirstname.Text, textBoxlastname.Text, textBoxUsername.Text, textBoxPassword.Text, comboBoxRole.Text, 1);
@@ -34,7 +54,7 @@ namespace Stinger_Bug_Tracker
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            bool res = uc.ManageUser(Int32.Parse(textBoxSearch.Text), textBoxFirstname.Text, textBoxlastname.Text, textBoxUsername.Text, textBoxPassword.Text, comboBoxRole.Text, 2);
+            bool res = uc.ManageUser(Int32.Parse(textBoxUidSearch.Text), textBoxFirstname.Text, textBoxlastname.Text, textBoxUsername.Text, textBoxPassword.Text, comboBoxRole.Text, 2);
             if (res == true)
             {
                 MessageBox.Show("Update successful!!");
@@ -47,7 +67,7 @@ namespace Stinger_Bug_Tracker
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            bool res = uc.ManageUser(Int32.Parse(textBoxSearch.Text), textBoxFirstname.Text, textBoxlastname.Text, textBoxUsername.Text, textBoxPassword.Text, comboBoxRole.Text, 3);
+            bool res = uc.ManageUser(Int32.Parse(textBoxUidSearch.Text), textBoxFirstname.Text, textBoxlastname.Text, textBoxUsername.Text, textBoxPassword.Text, comboBoxRole.Text, 3);
             if (res == true)
             {
                 MessageBox.Show("Successfully deleted the user!!");
