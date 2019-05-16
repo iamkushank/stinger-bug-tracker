@@ -53,7 +53,8 @@
             this.buttonBrowse = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtRichCode = new System.Windows.Forms.RichTextBox();
-            this.txtRichErrorSnapshot = new System.Windows.Forms.RichTextBox();
+            this.pictureBoxErrorSnapshot = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorSnapshot)).BeginInit();
             this.SuspendLayout();
             // 
             // labelDate
@@ -100,7 +101,7 @@
             // 
             this.labelCode.AutoSize = true;
             this.labelCode.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCode.Location = new System.Drawing.Point(224, 325);
+            this.labelCode.Location = new System.Drawing.Point(224, 323);
             this.labelCode.Name = "labelCode";
             this.labelCode.Size = new System.Drawing.Size(51, 20);
             this.labelCode.TabIndex = 0;
@@ -110,7 +111,7 @@
             // 
             this.labelClasslibrary.AutoSize = true;
             this.labelClasslibrary.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelClasslibrary.Location = new System.Drawing.Point(555, 96);
+            this.labelClasslibrary.Location = new System.Drawing.Point(555, 273);
             this.labelClasslibrary.Name = "labelClasslibrary";
             this.labelClasslibrary.Size = new System.Drawing.Size(98, 20);
             this.labelClasslibrary.TabIndex = 0;
@@ -140,7 +141,7 @@
             // 
             this.labelMethod.AutoSize = true;
             this.labelMethod.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMethod.Location = new System.Drawing.Point(587, 273);
+            this.labelMethod.Location = new System.Drawing.Point(582, 97);
             this.labelMethod.Name = "labelMethod";
             this.labelMethod.Size = new System.Drawing.Size(68, 20);
             this.labelMethod.TabIndex = 0;
@@ -159,6 +160,7 @@
             // dtpDate
             // 
             this.dtpDate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDate.Location = new System.Drawing.Point(312, 91);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(200, 26);
@@ -192,7 +194,7 @@
             // txtClassLibrary
             // 
             this.txtClassLibrary.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClassLibrary.Location = new System.Drawing.Point(677, 90);
+            this.txtClassLibrary.Location = new System.Drawing.Point(677, 91);
             this.txtClassLibrary.Name = "txtClassLibrary";
             this.txtClassLibrary.Size = new System.Drawing.Size(200, 26);
             this.txtClassLibrary.TabIndex = 3;
@@ -282,6 +284,7 @@
             this.buttonBrowse.TabIndex = 4;
             this.buttonBrowse.Text = "Browse";
             this.buttonBrowse.UseVisualStyleBackColor = false;
+            this.buttonBrowse.Click += new System.EventHandler(this.buttonBrowse_Click);
             // 
             // panel1
             // 
@@ -295,17 +298,18 @@
             // 
             this.txtRichCode.Location = new System.Drawing.Point(312, 325);
             this.txtRichCode.Name = "txtRichCode";
-            this.txtRichCode.Size = new System.Drawing.Size(200, 151);
+            this.txtRichCode.Size = new System.Drawing.Size(200, 153);
             this.txtRichCode.TabIndex = 6;
             this.txtRichCode.Text = "";
             // 
-            // txtRichErrorSnapshot
+            // pictureBoxErrorSnapshot
             // 
-            this.txtRichErrorSnapshot.Location = new System.Drawing.Point(677, 327);
-            this.txtRichErrorSnapshot.Name = "txtRichErrorSnapshot";
-            this.txtRichErrorSnapshot.Size = new System.Drawing.Size(199, 151);
-            this.txtRichErrorSnapshot.TabIndex = 6;
-            this.txtRichErrorSnapshot.Text = "";
+            this.pictureBoxErrorSnapshot.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxErrorSnapshot.Location = new System.Drawing.Point(678, 325);
+            this.pictureBoxErrorSnapshot.Name = "pictureBoxErrorSnapshot";
+            this.pictureBoxErrorSnapshot.Size = new System.Drawing.Size(199, 153);
+            this.pictureBoxErrorSnapshot.TabIndex = 54;
+            this.pictureBoxErrorSnapshot.TabStop = false;
             // 
             // AddbugForm
             // 
@@ -313,7 +317,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(967, 501);
-            this.Controls.Add(this.txtRichErrorSnapshot);
+            this.Controls.Add(this.pictureBoxErrorSnapshot);
             this.Controls.Add(this.txtRichCode);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonBrowse);
@@ -347,6 +351,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "AddbugForm";
             this.TopMost = true;
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorSnapshot)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -379,6 +384,6 @@
         private System.Windows.Forms.Button buttonBrowse;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RichTextBox txtRichCode;
-        private System.Windows.Forms.RichTextBox txtRichErrorSnapshot;
+        private System.Windows.Forms.PictureBox pictureBoxErrorSnapshot;
     }
 }

@@ -37,11 +37,9 @@
             this.labelBug = new System.Windows.Forms.Label();
             this.labelProject = new System.Windows.Forms.Label();
             this.labelDate = new System.Windows.Forms.Label();
-            this.txtMethod = new System.Windows.Forms.TextBox();
             this.txtLinenumber = new System.Windows.Forms.TextBox();
             this.txtClassLibrary = new System.Windows.Forms.TextBox();
-            this.comboIdentify = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.comboSolved = new System.Windows.Forms.ComboBox();
             this.labelIdentify = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,8 +48,13 @@
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.labelErroSnapshot = new System.Windows.Forms.Label();
-            this.txtRichErrorSnapshot = new System.Windows.Forms.RichTextBox();
             this.buttonBrowse = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtRichCode = new System.Windows.Forms.RichTextBox();
+            this.txtMethod = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBoxErrorSnapshot = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorSnapshot)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -90,6 +93,7 @@
             // dtpDate
             // 
             this.dtpDate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDate.Location = new System.Drawing.Point(312, 91);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(200, 26);
@@ -135,14 +139,6 @@
             this.labelDate.TabIndex = 30;
             this.labelDate.Text = "Date";
             // 
-            // txtMethod
-            // 
-            this.txtMethod.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMethod.Location = new System.Drawing.Point(677, 267);
-            this.txtMethod.Name = "txtMethod";
-            this.txtMethod.Size = new System.Drawing.Size(200, 26);
-            this.txtMethod.TabIndex = 40;
-            // 
             // txtLinenumber
             // 
             this.txtLinenumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -154,29 +150,19 @@
             // txtClassLibrary
             // 
             this.txtClassLibrary.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClassLibrary.Location = new System.Drawing.Point(677, 90);
+            this.txtClassLibrary.Location = new System.Drawing.Point(677, 267);
             this.txtClassLibrary.Name = "txtClassLibrary";
             this.txtClassLibrary.Size = new System.Drawing.Size(200, 26);
             this.txtClassLibrary.TabIndex = 42;
             // 
-            // comboIdentify
+            // comboSolved
             // 
-            this.comboIdentify.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboIdentify.FormattingEnabled = true;
-            this.comboIdentify.Location = new System.Drawing.Point(677, 149);
-            this.comboIdentify.Name = "comboIdentify";
-            this.comboIdentify.Size = new System.Drawing.Size(200, 28);
-            this.comboIdentify.TabIndex = 39;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(587, 273);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 20);
-            this.label1.TabIndex = 35;
-            this.label1.Text = "Method";
+            this.comboSolved.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboSolved.FormattingEnabled = true;
+            this.comboSolved.Location = new System.Drawing.Point(677, 149);
+            this.comboSolved.Name = "comboSolved";
+            this.comboSolved.Size = new System.Drawing.Size(200, 28);
+            this.comboSolved.TabIndex = 39;
             // 
             // labelIdentify
             // 
@@ -202,7 +188,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(555, 96);
+            this.label3.Location = new System.Drawing.Point(555, 273);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 20);
             this.label3.TabIndex = 38;
@@ -219,6 +205,7 @@
             this.buttonClose.TabIndex = 43;
             this.buttonClose.Text = "Close";
             this.buttonClose.UseVisualStyleBackColor = false;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // buttonDelete
             // 
@@ -267,14 +254,6 @@
             this.labelErroSnapshot.TabIndex = 47;
             this.labelErroSnapshot.Text = "Error Snapshot";
             // 
-            // txtRichErrorSnapshot
-            // 
-            this.txtRichErrorSnapshot.Location = new System.Drawing.Point(677, 327);
-            this.txtRichErrorSnapshot.Name = "txtRichErrorSnapshot";
-            this.txtRichErrorSnapshot.Size = new System.Drawing.Size(199, 151);
-            this.txtRichErrorSnapshot.TabIndex = 48;
-            this.txtRichErrorSnapshot.Text = "";
-            // 
             // buttonBrowse
             // 
             this.buttonBrowse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(19)))));
@@ -286,6 +265,52 @@
             this.buttonBrowse.TabIndex = 49;
             this.buttonBrowse.Text = "Browse";
             this.buttonBrowse.UseVisualStyleBackColor = false;
+            this.buttonBrowse.Click += new System.EventHandler(this.buttonBrowse_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(224, 323);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(51, 20);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "Code";
+            // 
+            // txtRichCode
+            // 
+            this.txtRichCode.Location = new System.Drawing.Point(312, 325);
+            this.txtRichCode.Name = "txtRichCode";
+            this.txtRichCode.Size = new System.Drawing.Size(200, 153);
+            this.txtRichCode.TabIndex = 50;
+            this.txtRichCode.Text = "";
+            // 
+            // txtMethod
+            // 
+            this.txtMethod.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMethod.Location = new System.Drawing.Point(677, 91);
+            this.txtMethod.Name = "txtMethod";
+            this.txtMethod.Size = new System.Drawing.Size(200, 26);
+            this.txtMethod.TabIndex = 52;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(582, 97);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 20);
+            this.label1.TabIndex = 51;
+            this.label1.Text = "Method";
+            // 
+            // pictureBoxErrorSnapshot
+            // 
+            this.pictureBoxErrorSnapshot.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxErrorSnapshot.Location = new System.Drawing.Point(678, 325);
+            this.pictureBoxErrorSnapshot.Name = "pictureBoxErrorSnapshot";
+            this.pictureBoxErrorSnapshot.Size = new System.Drawing.Size(199, 153);
+            this.pictureBoxErrorSnapshot.TabIndex = 53;
+            this.pictureBoxErrorSnapshot.TabStop = false;
             // 
             // FixbugForm
             // 
@@ -293,18 +318,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(967, 501);
+            this.Controls.Add(this.pictureBoxErrorSnapshot);
+            this.Controls.Add(this.txtMethod);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtRichCode);
             this.Controls.Add(this.buttonBrowse);
-            this.Controls.Add(this.txtRichErrorSnapshot);
             this.Controls.Add(this.labelErroSnapshot);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.buttonAdd);
-            this.Controls.Add(this.txtMethod);
             this.Controls.Add(this.txtLinenumber);
             this.Controls.Add(this.txtClassLibrary);
-            this.Controls.Add(this.comboIdentify);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.comboSolved);
             this.Controls.Add(this.labelIdentify);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
@@ -312,6 +338,7 @@
             this.Controls.Add(this.txtBug);
             this.Controls.Add(this.combProject);
             this.Controls.Add(this.dtpDate);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.labelClass);
             this.Controls.Add(this.labelBug);
             this.Controls.Add(this.labelProject);
@@ -325,6 +352,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "FixbugForm";
             this.TopMost = true;
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorSnapshot)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,11 +369,9 @@
         private System.Windows.Forms.Label labelBug;
         private System.Windows.Forms.Label labelProject;
         private System.Windows.Forms.Label labelDate;
-        private System.Windows.Forms.TextBox txtMethod;
         private System.Windows.Forms.TextBox txtLinenumber;
         private System.Windows.Forms.TextBox txtClassLibrary;
-        private System.Windows.Forms.ComboBox comboIdentify;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboSolved;
         private System.Windows.Forms.Label labelIdentify;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -354,7 +380,11 @@
         private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Label labelErroSnapshot;
-        private System.Windows.Forms.RichTextBox txtRichErrorSnapshot;
         private System.Windows.Forms.Button buttonBrowse;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.RichTextBox txtRichCode;
+        private System.Windows.Forms.TextBox txtMethod;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBoxErrorSnapshot;
     }
 }

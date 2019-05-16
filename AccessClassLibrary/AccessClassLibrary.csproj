@@ -40,7 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BugClass.cs" />
     <Compile Include="DB.cs" />
+    <Compile Include="FixbugClass.cs" />
+    <Compile Include="ProjectClass.cs" />
     <Compile Include="UserClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -44,6 +44,7 @@
             // 
             // buttonLinkedin
             // 
+            this.buttonLinkedin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonLinkedin.FlatAppearance.BorderSize = 0;
             this.buttonLinkedin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLinkedin.Image = ((System.Drawing.Image)(resources.GetObject("buttonLinkedin.Image")));

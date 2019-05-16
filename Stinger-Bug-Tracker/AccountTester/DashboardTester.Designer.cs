@@ -378,6 +378,7 @@
             this.buttonGithub.Size = new System.Drawing.Size(204, 60);
             this.buttonGithub.TabIndex = 6;
             this.buttonGithub.UseVisualStyleBackColor = false;
+            this.buttonGithub.Click += new System.EventHandler(this.buttonGithub_Click);
             // 
             // panel3
             // 
@@ -494,9 +495,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button buttonAddBug;
-        private System.Windows.Forms.Button buttonFixBug;
-        private System.Windows.Forms.Button buttonListBug;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
@@ -506,12 +504,10 @@
         private System.Windows.Forms.PictureBox pictureBoxProfile;
         private System.Windows.Forms.DataGridView dataGridViewList;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button buttonProject;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Button buttonManage;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.TextBox textBoxSearch;
@@ -523,6 +519,11 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel8;
         private CircularButton buttonSignout;
+        public System.Windows.Forms.Button buttonAddBug;
+        public System.Windows.Forms.Button buttonFixBug;
+        public System.Windows.Forms.Button buttonListBug;
+        public System.Windows.Forms.Button buttonProject;
+        public System.Windows.Forms.Button buttonManage;
 
     }
 }

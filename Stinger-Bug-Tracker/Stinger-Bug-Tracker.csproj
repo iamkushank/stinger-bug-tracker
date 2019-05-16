@@ -267,6 +267,7 @@
     <Content Include="images\project-png-large.png" />
     <Content Include="images\project-png.png" />
     <Content Include="images\scan-bug.png" />
+    <Content Include="images\search-png.png" />
     <Content Include="images\stinger-logo.png" />
     <Content Include="images\twitter-png.png" />
     <Content Include="images\usericon.png" />

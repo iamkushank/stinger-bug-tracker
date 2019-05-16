@@ -14,6 +14,7 @@ namespace Stinger_Bug_Tracker
 {
     public partial class LoginForm : Form
     {
+        UserClass uc = new UserClass();
         public LoginForm()
         {
             InitializeComponent();
@@ -40,57 +41,44 @@ namespace Stinger_Bug_Tracker
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            DB db = new DB();
+            //DB db = new DB();
+            //NewMethod(db);
 
-            String username = textBoxUsername.Text;
-            String password = textBoxPassword.Text;
+            string role = uc.RoleBaseLogin(textBoxUsername.Text, textBoxPassword.Text);
 
-            DataTable table = new DataTable();
-
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
-
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `tbl_members` WHERE `username` = @usn AND `password`= @pass", db.getConnection());
-
-            command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = username;
-            command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = password;
-
-            adapter.SelectCommand = command;
-
-            adapter.Fill(table);
-
-            if (table.Rows.Count > 0)
+            if (role == "Admin")
             {
-                /*
-                string role = UserClass.role(textBoxUsername.Text, textBoxPassword.Text);
-                MessageBox.Show(role);
-
-                if (role == "Tester (default)")
-                {
-                    this.Hide();
-                    DashboardTester dashboard = new DashboardTester();
-                   // dashboard. // ------------------------
-                    dashboard.Show();
-                }
-                else if (role == "Developer")
-                {
-                    this.Hide();
-                    DashboardTester dashboard = new DashboardTester();
-                    dashboard.Show();
-                }
-                else if (role == "Programmer")
-                {
-                    this.Hide();
-                    DashboardTester dashboard = new DashboardTester();
-                    dashboard.Show();
-                }
-                */
-
                 this.Hide();
                 DashboardTester dashboard = new DashboardTester();
                 dashboard.Show();
+
+                MessageBox.Show("Welecome Admin!!", "Administrator", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (role == "Programmer")
+            {
+                this.Hide();
+                DashboardTester dashboard = new DashboardTester();
+                dashboard.buttonManage.Enabled = false;
+                dashboard.Show();
+
+                MessageBox.Show("Welecome Programmer!!", "A coder", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (role == "Tester (default)")
+            {
+                this.Hide();
+                DashboardTester dashboard = new DashboardTester();
+                dashboard.buttonManage.Enabled = false;
+                dashboard.buttonProject.Enabled = false;
+                dashboard.buttonFixBug.Enabled = false;
+                dashboard.Show();
+
+                MessageBox.Show("Welecome Tester!!", "A default user", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
+                String username = textBoxUsername.Text;
+                String password = textBoxPassword.Text;
+
                 if (username.Trim().Equals(""))
                 {
                     MessageBox.Show("Enter your username to login", "Empty username!!", MessageBoxButtons.OK, MessageBoxIcon.Error);

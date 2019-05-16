@@ -221,5 +221,10 @@ namespace Stinger_Bug_Tracker
             AboutForm about = new AboutForm();
             about.Show();
         }
+
+        private void buttonGithub_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/iamkuhank/stinger-bug-tracker/commits/master");
+        }
     }
 }

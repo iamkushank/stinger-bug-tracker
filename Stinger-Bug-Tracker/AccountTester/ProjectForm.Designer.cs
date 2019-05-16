@@ -33,8 +33,8 @@
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.textBoxProject = new System.Windows.Forms.TextBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpEnddate = new System.Windows.Forms.DateTimePicker();
+            this.dtpStartdate = new System.Windows.Forms.DateTimePicker();
             this.labelErroSnapshot = new System.Windows.Forms.Label();
             this.labelDescription = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,7 +42,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxProjectid = new System.Windows.Forms.TextBox();
             this.txtRichDescription = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
@@ -103,27 +103,29 @@
             this.textBoxProject.Size = new System.Drawing.Size(200, 26);
             this.textBoxProject.TabIndex = 52;
             // 
-            // dateTimePicker2
+            // dtpEnddate
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(439, 218);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 26);
-            this.dateTimePicker2.TabIndex = 50;
+            this.dtpEnddate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpEnddate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpEnddate.Location = new System.Drawing.Point(439, 218);
+            this.dtpEnddate.Name = "dtpEnddate";
+            this.dtpEnddate.Size = new System.Drawing.Size(200, 26);
+            this.dtpEnddate.TabIndex = 50;
             // 
-            // dateTimePicker1
+            // dtpStartdate
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(439, 167);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
-            this.dateTimePicker1.TabIndex = 51;
+            this.dtpStartdate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpStartdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpStartdate.Location = new System.Drawing.Point(439, 167);
+            this.dtpStartdate.Name = "dtpStartdate";
+            this.dtpStartdate.Size = new System.Drawing.Size(200, 26);
+            this.dtpStartdate.TabIndex = 51;
             // 
             // labelErroSnapshot
             // 
             this.labelErroSnapshot.AutoSize = true;
             this.labelErroSnapshot.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelErroSnapshot.Location = new System.Drawing.Point(301, 223);
+            this.labelErroSnapshot.Location = new System.Drawing.Point(318, 223);
             this.labelErroSnapshot.Name = "labelErroSnapshot";
             this.labelErroSnapshot.Size = new System.Drawing.Size(76, 20);
             this.labelErroSnapshot.TabIndex = 45;
@@ -133,7 +135,7 @@
             // 
             this.labelDescription.AutoSize = true;
             this.labelDescription.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDescription.Location = new System.Drawing.Point(286, 286);
+            this.labelDescription.Location = new System.Drawing.Point(303, 286);
             this.labelDescription.Name = "labelDescription";
             this.labelDescription.Size = new System.Drawing.Size(91, 20);
             this.labelDescription.TabIndex = 46;
@@ -143,7 +145,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(316, 119);
+            this.label2.Location = new System.Drawing.Point(333, 119);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 20);
             this.label2.TabIndex = 47;
@@ -153,7 +155,7 @@
             // 
             this.labelDate.AutoSize = true;
             this.labelDate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDate.Location = new System.Drawing.Point(296, 172);
+            this.labelDate.Location = new System.Drawing.Point(313, 172);
             this.labelDate.Name = "labelDate";
             this.labelDate.Size = new System.Drawing.Size(81, 20);
             this.labelDate.TabIndex = 49;
@@ -189,13 +191,13 @@
             this.label3.TabIndex = 59;
             this.label3.Text = "ID";
             // 
-            // textBox1
+            // textBoxProjectid
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(234, 14);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(89, 26);
-            this.textBox1.TabIndex = 58;
+            this.textBoxProjectid.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxProjectid.Location = new System.Drawing.Point(234, 14);
+            this.textBoxProjectid.Name = "textBoxProjectid";
+            this.textBoxProjectid.Size = new System.Drawing.Size(89, 26);
+            this.textBoxProjectid.TabIndex = 58;
             // 
             // txtRichDescription
             // 
@@ -214,15 +216,15 @@
             this.Controls.Add(this.txtRichDescription);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxProjectid);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.textBoxProject);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpEnddate);
+            this.Controls.Add(this.dtpStartdate);
             this.Controls.Add(this.labelErroSnapshot);
             this.Controls.Add(this.labelDescription);
             this.Controls.Add(this.label2);
@@ -247,8 +249,8 @@
         private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.TextBox textBoxProject;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpEnddate;
+        private System.Windows.Forms.DateTimePicker dtpStartdate;
         private System.Windows.Forms.Label labelErroSnapshot;
         private System.Windows.Forms.Label labelDescription;
         private System.Windows.Forms.Label label2;
@@ -256,7 +258,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxProjectid;
         private System.Windows.Forms.RichTextBox txtRichDescription;
     }
 }
