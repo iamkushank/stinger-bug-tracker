@@ -52,7 +52,7 @@
             this.buttonExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExit.Location = new System.Drawing.Point(728, 410);
+            this.buttonExit.Location = new System.Drawing.Point(728, 395);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(75, 30);
             this.buttonExit.TabIndex = 53;
@@ -66,7 +66,7 @@
             this.buttonDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDelete.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDelete.Location = new System.Drawing.Point(728, 361);
+            this.buttonDelete.Location = new System.Drawing.Point(728, 348);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(75, 30);
             this.buttonDelete.TabIndex = 54;
@@ -80,7 +80,7 @@
             this.buttonUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUpdate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUpdate.Location = new System.Drawing.Point(728, 312);
+            this.buttonUpdate.Location = new System.Drawing.Point(728, 299);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(75, 30);
             this.buttonUpdate.TabIndex = 55;
@@ -94,7 +94,7 @@
             this.buttonAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAdd.Location = new System.Drawing.Point(728, 263);
+            this.buttonAdd.Location = new System.Drawing.Point(728, 250);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(75, 30);
             this.buttonAdd.TabIndex = 56;
@@ -142,7 +142,7 @@
             // 
             this.labelDescription.AutoSize = true;
             this.labelDescription.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDescription.Location = new System.Drawing.Point(303, 286);
+            this.labelDescription.Location = new System.Drawing.Point(303, 272);
             this.labelDescription.Name = "labelDescription";
             this.labelDescription.Size = new System.Drawing.Size(91, 20);
             this.labelDescription.TabIndex = 46;
@@ -152,11 +152,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(333, 119);
+            this.label2.Location = new System.Drawing.Point(285, 119);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 20);
+            this.label2.Size = new System.Drawing.Size(109, 20);
             this.label2.TabIndex = 47;
-            this.label2.Text = "Project";
+            this.label2.Text = "Project Name";
             // 
             // labelDate
             // 
@@ -178,7 +178,7 @@
             // 
             // txtRichDescription
             // 
-            this.txtRichDescription.Location = new System.Drawing.Point(439, 288);
+            this.txtRichDescription.Location = new System.Drawing.Point(439, 274);
             this.txtRichDescription.Name = "txtRichDescription";
             this.txtRichDescription.Size = new System.Drawing.Size(199, 151);
             this.txtRichDescription.TabIndex = 61;

@@ -16,7 +16,7 @@ namespace AccessClassLibrary
         {
             try
             {
-                  
+
                 bool result = false;
                 string txtsql = "";
                 if (Mode == 1)
@@ -56,71 +56,36 @@ namespace AccessClassLibrary
             {
                 cmd.Close();
             }
-
-
         }
 
-        public bool Login(string username, string password)
+        public DataTable getallsolution()
+        {
+            DataTable dt = new DataTable();
+            MySqlCommand com = new MySqlCommand("Select * from tbl_solutions", cmd);
+            cmd.Open();
+            MySqlDataReader dr = com.ExecuteReader();
+            dt.Load(dr);
+            cmd.Close();
+            return dt;
+        }
+
+        public DataTable getallsolutionbyid(int id)
         {
             try
             {
                 DataTable dt = new DataTable();
-                MySqlCommand sc = new MySqlCommand("Select * from tbl_members where username=@usn and password=@pass", cmd);
-                sc.CommandType = CommandType.Text;
-                sc.Parameters.AddWithValue("@usn", username);
-                sc.Parameters.AddWithValue("@pass", password);
-
+                MySqlCommand com = new MySqlCommand("Select * from tbl_solutions where solutionid =@sid", cmd);
+                com.CommandType = CommandType.Text;
+                com.Parameters.AddWithValue("@sid", id);
                 cmd.Open();
-                MySqlDataReader dr = sc.ExecuteReader();
+                MySqlDataReader dr = com.ExecuteReader();
                 dt.Load(dr);
                 cmd.Close();
-
-                if (dt.Rows.Count > 0)
-                    return true;
-                else
-                    return false;
+                return dt;
             }
             catch (Exception ex)
             {
                 throw ex;
-            }
-            finally
-            {
-                cmd.Close();
-            }
-        }
-
-        public bool RoleBaseLogin(string username, string password)
-        {
-            try
-            {
-                DataTable dt = new DataTable();
-                MySqlCommand sc = new MySqlCommand("Select * from tbl_members where username=@usn and password=@pass", cmd);
-                sc.CommandType = CommandType.Text;
-                sc.Parameters.AddWithValue("@usn", username);
-                sc.Parameters.AddWithValue("@pass", password);
-
-                cmd.Open();
-                MySqlDataReader dr = sc.ExecuteReader();
-                dt.Load(dr);
-                cmd.Close();
-
-                if (dt.Rows.Count > 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                cmd.Close();
             }
         }
     }

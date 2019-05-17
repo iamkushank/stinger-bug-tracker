@@ -21,7 +21,7 @@ namespace AccessClassLibrary
                 if (Mode == 1)
                     txtsql = "Insert into tbl_members (firstname, lastname, username, password, role) values (@fn, @ln, @usn, @pass, @role)";
                 if (Mode == 2)
-                    txtsql = "Update tbl_members set firstname=@fn, lastname=@ln, username=@usn,password=@pass,role=@role where id=@id";
+                    txtsql = "Update tbl_members set firstname=@fn, lastname=@ln, username=@usn, password=@pass, role=@role where id=@id";
                 if(Mode == 3)
                     txtsql = "Delete from tbl_members where id=@id";
 
@@ -108,6 +108,37 @@ namespace AccessClassLibrary
             finally
             {
                 cmd.Close();
+            }
+        }
+
+        public DataTable getallmember()
+        {
+            DataTable dt = new DataTable();
+            MySqlCommand com = new MySqlCommand("Select * from tbl_members", cmd);
+            cmd.Open();
+            MySqlDataReader dr = com.ExecuteReader();
+            dt.Load(dr);
+            cmd.Close();
+            return dt;
+        }
+
+        public DataTable getallmemberbyid(int id)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                MySqlCommand com = new MySqlCommand("Select * from tbl_members where id =@id", cmd);
+                com.CommandType = CommandType.Text;
+                com.Parameters.AddWithValue("@id", id);
+                cmd.Open();
+                MySqlDataReader dr = com.ExecuteReader();
+                dt.Load(dr);
+                cmd.Close();
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
         }
     }

@@ -72,9 +72,11 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(12, 55);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(188, 20);
+            this.label2.Size = new System.Drawing.Size(494, 60);
             this.label2.TabIndex = 15;
-            this.label2.Text = "project projects projects";
+            this.label2.Text = "Project tab takes you to the section where you can add, update,\r\nand delete proje" +
+    "cts that has been stored in the database. You can\r\neven search selective project" +
+    "s with the help of the project id.";
             // 
             // aboutProject
             // 

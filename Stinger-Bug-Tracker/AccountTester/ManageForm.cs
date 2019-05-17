@@ -82,5 +82,10 @@ namespace Stinger_Bug_Tracker
         {
             this.Close();
         }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

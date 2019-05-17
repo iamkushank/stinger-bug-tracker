@@ -47,8 +47,6 @@
             this.txtMethod = new System.Windows.Forms.TextBox();
             this.comboIdentify = new System.Windows.Forms.ComboBox();
             this.buttonAdd = new System.Windows.Forms.Button();
-            this.buttonUpdate = new System.Windows.Forms.Button();
-            this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             this.buttonBrowse = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -61,7 +59,7 @@
             // 
             this.labelDate.AutoSize = true;
             this.labelDate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDate.Location = new System.Drawing.Point(230, 96);
+            this.labelDate.Location = new System.Drawing.Point(230, 28);
             this.labelDate.Name = "labelDate";
             this.labelDate.Size = new System.Drawing.Size(45, 20);
             this.labelDate.TabIndex = 0;
@@ -71,7 +69,7 @@
             // 
             this.labelProject.AutoSize = true;
             this.labelProject.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelProject.Location = new System.Drawing.Point(215, 152);
+            this.labelProject.Location = new System.Drawing.Point(215, 84);
             this.labelProject.Name = "labelProject";
             this.labelProject.Size = new System.Drawing.Size(61, 20);
             this.labelProject.TabIndex = 0;
@@ -81,7 +79,7 @@
             // 
             this.labelBug.AutoSize = true;
             this.labelBug.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBug.Location = new System.Drawing.Point(239, 212);
+            this.labelBug.Location = new System.Drawing.Point(239, 144);
             this.labelBug.Name = "labelBug";
             this.labelBug.Size = new System.Drawing.Size(37, 20);
             this.labelBug.TabIndex = 0;
@@ -91,7 +89,7 @@
             // 
             this.labelClass.AutoSize = true;
             this.labelClass.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelClass.Location = new System.Drawing.Point(230, 273);
+            this.labelClass.Location = new System.Drawing.Point(230, 205);
             this.labelClass.Name = "labelClass";
             this.labelClass.Size = new System.Drawing.Size(46, 20);
             this.labelClass.TabIndex = 0;
@@ -101,7 +99,7 @@
             // 
             this.labelCode.AutoSize = true;
             this.labelCode.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCode.Location = new System.Drawing.Point(224, 323);
+            this.labelCode.Location = new System.Drawing.Point(224, 255);
             this.labelCode.Name = "labelCode";
             this.labelCode.Size = new System.Drawing.Size(51, 20);
             this.labelCode.TabIndex = 0;
@@ -111,7 +109,7 @@
             // 
             this.labelClasslibrary.AutoSize = true;
             this.labelClasslibrary.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelClasslibrary.Location = new System.Drawing.Point(555, 273);
+            this.labelClasslibrary.Location = new System.Drawing.Point(555, 205);
             this.labelClasslibrary.Name = "labelClasslibrary";
             this.labelClasslibrary.Size = new System.Drawing.Size(98, 20);
             this.labelClasslibrary.TabIndex = 0;
@@ -121,7 +119,7 @@
             // 
             this.labelLinenumber.AutoSize = true;
             this.labelLinenumber.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLinenumber.Location = new System.Drawing.Point(555, 212);
+            this.labelLinenumber.Location = new System.Drawing.Point(555, 144);
             this.labelLinenumber.Name = "labelLinenumber";
             this.labelLinenumber.Size = new System.Drawing.Size(100, 20);
             this.labelLinenumber.TabIndex = 0;
@@ -131,7 +129,7 @@
             // 
             this.labelIdentify.AutoSize = true;
             this.labelIdentify.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIdentify.Location = new System.Drawing.Point(570, 152);
+            this.labelIdentify.Location = new System.Drawing.Point(570, 84);
             this.labelIdentify.Name = "labelIdentify";
             this.labelIdentify.Size = new System.Drawing.Size(85, 20);
             this.labelIdentify.TabIndex = 0;
@@ -141,7 +139,7 @@
             // 
             this.labelMethod.AutoSize = true;
             this.labelMethod.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMethod.Location = new System.Drawing.Point(582, 97);
+            this.labelMethod.Location = new System.Drawing.Point(582, 29);
             this.labelMethod.Name = "labelMethod";
             this.labelMethod.Size = new System.Drawing.Size(68, 20);
             this.labelMethod.TabIndex = 0;
@@ -151,7 +149,7 @@
             // 
             this.labelErroSnapshot.AutoSize = true;
             this.labelErroSnapshot.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelErroSnapshot.Location = new System.Drawing.Point(543, 325);
+            this.labelErroSnapshot.Location = new System.Drawing.Point(543, 257);
             this.labelErroSnapshot.Name = "labelErroSnapshot";
             this.labelErroSnapshot.Size = new System.Drawing.Size(112, 20);
             this.labelErroSnapshot.TabIndex = 0;
@@ -161,7 +159,7 @@
             // 
             this.dtpDate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDate.Location = new System.Drawing.Point(312, 91);
+            this.dtpDate.Location = new System.Drawing.Point(312, 23);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(200, 26);
             this.dtpDate.TabIndex = 1;
@@ -170,7 +168,7 @@
             // 
             this.combProject.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combProject.FormattingEnabled = true;
-            this.combProject.Location = new System.Drawing.Point(312, 149);
+            this.combProject.Location = new System.Drawing.Point(312, 81);
             this.combProject.Name = "combProject";
             this.combProject.Size = new System.Drawing.Size(200, 28);
             this.combProject.TabIndex = 2;
@@ -178,7 +176,7 @@
             // txtBug
             // 
             this.txtBug.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBug.Location = new System.Drawing.Point(312, 209);
+            this.txtBug.Location = new System.Drawing.Point(312, 141);
             this.txtBug.Name = "txtBug";
             this.txtBug.Size = new System.Drawing.Size(200, 26);
             this.txtBug.TabIndex = 3;
@@ -186,7 +184,7 @@
             // txtClass
             // 
             this.txtClass.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClass.Location = new System.Drawing.Point(312, 267);
+            this.txtClass.Location = new System.Drawing.Point(312, 199);
             this.txtClass.Name = "txtClass";
             this.txtClass.Size = new System.Drawing.Size(200, 26);
             this.txtClass.TabIndex = 3;
@@ -194,7 +192,7 @@
             // txtClassLibrary
             // 
             this.txtClassLibrary.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClassLibrary.Location = new System.Drawing.Point(677, 91);
+            this.txtClassLibrary.Location = new System.Drawing.Point(677, 23);
             this.txtClassLibrary.Name = "txtClassLibrary";
             this.txtClassLibrary.Size = new System.Drawing.Size(200, 26);
             this.txtClassLibrary.TabIndex = 3;
@@ -202,7 +200,7 @@
             // txtLinenumber
             // 
             this.txtLinenumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLinenumber.Location = new System.Drawing.Point(677, 210);
+            this.txtLinenumber.Location = new System.Drawing.Point(677, 142);
             this.txtLinenumber.Name = "txtLinenumber";
             this.txtLinenumber.Size = new System.Drawing.Size(200, 24);
             this.txtLinenumber.TabIndex = 3;
@@ -210,7 +208,7 @@
             // txtMethod
             // 
             this.txtMethod.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMethod.Location = new System.Drawing.Point(677, 267);
+            this.txtMethod.Location = new System.Drawing.Point(677, 199);
             this.txtMethod.Name = "txtMethod";
             this.txtMethod.Size = new System.Drawing.Size(200, 26);
             this.txtMethod.TabIndex = 3;
@@ -219,7 +217,7 @@
             // 
             this.comboIdentify.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboIdentify.FormattingEnabled = true;
-            this.comboIdentify.Location = new System.Drawing.Point(677, 149);
+            this.comboIdentify.Location = new System.Drawing.Point(677, 81);
             this.comboIdentify.Name = "comboIdentify";
             this.comboIdentify.Size = new System.Drawing.Size(200, 28);
             this.comboIdentify.TabIndex = 2;
@@ -230,7 +228,7 @@
             this.buttonAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAdd.Location = new System.Drawing.Point(312, 28);
+            this.buttonAdd.Location = new System.Drawing.Point(437, 449);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(75, 30);
             this.buttonAdd.TabIndex = 4;
@@ -238,41 +236,13 @@
             this.buttonAdd.UseVisualStyleBackColor = false;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
-            // buttonUpdate
-            // 
-            this.buttonUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(19)))));
-            this.buttonUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonUpdate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUpdate.Location = new System.Drawing.Point(475, 28);
-            this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(75, 30);
-            this.buttonUpdate.TabIndex = 4;
-            this.buttonUpdate.Text = "Update";
-            this.buttonUpdate.UseVisualStyleBackColor = false;
-            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
-            // 
-            // buttonDelete
-            // 
-            this.buttonDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(19)))));
-            this.buttonDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDelete.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDelete.Location = new System.Drawing.Point(638, 28);
-            this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(75, 30);
-            this.buttonDelete.TabIndex = 4;
-            this.buttonDelete.Text = "Delete";
-            this.buttonDelete.UseVisualStyleBackColor = false;
-            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
-            // 
             // buttonClose
             // 
             this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(19)))));
             this.buttonClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClose.Location = new System.Drawing.Point(801, 28);
+            this.buttonClose.Location = new System.Drawing.Point(547, 449);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(75, 30);
             this.buttonClose.TabIndex = 4;
@@ -286,7 +256,7 @@
             this.buttonBrowse.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonBrowse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBrowse.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBrowse.Location = new System.Drawing.Point(578, 448);
+            this.buttonBrowse.Location = new System.Drawing.Point(578, 380);
             this.buttonBrowse.Name = "buttonBrowse";
             this.buttonBrowse.Size = new System.Drawing.Size(75, 30);
             this.buttonBrowse.TabIndex = 4;
@@ -304,7 +274,7 @@
             // 
             // txtRichCode
             // 
-            this.txtRichCode.Location = new System.Drawing.Point(312, 325);
+            this.txtRichCode.Location = new System.Drawing.Point(312, 257);
             this.txtRichCode.Name = "txtRichCode";
             this.txtRichCode.Size = new System.Drawing.Size(200, 153);
             this.txtRichCode.TabIndex = 6;
@@ -313,7 +283,7 @@
             // pictureBoxErrorSnapshot
             // 
             this.pictureBoxErrorSnapshot.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxErrorSnapshot.Location = new System.Drawing.Point(678, 325);
+            this.pictureBoxErrorSnapshot.Location = new System.Drawing.Point(678, 257);
             this.pictureBoxErrorSnapshot.Name = "pictureBoxErrorSnapshot";
             this.pictureBoxErrorSnapshot.Size = new System.Drawing.Size(199, 153);
             this.pictureBoxErrorSnapshot.TabIndex = 54;
@@ -330,8 +300,6 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonBrowse);
             this.Controls.Add(this.buttonClose);
-            this.Controls.Add(this.buttonDelete);
-            this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.txtMethod);
             this.Controls.Add(this.txtLinenumber);
@@ -386,8 +354,6 @@
         private System.Windows.Forms.TextBox txtMethod;
         private System.Windows.Forms.ComboBox comboIdentify;
         private System.Windows.Forms.Button buttonAdd;
-        private System.Windows.Forms.Button buttonUpdate;
-        private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Button buttonBrowse;
         private System.Windows.Forms.Panel panel1;

@@ -190,10 +190,10 @@
         private System.Windows.Forms.Label labelClose;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxPassword;
-        private System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.Label labelGoToSignUp;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox textBoxUsername;
     }
 }

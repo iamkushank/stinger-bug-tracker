@@ -16,6 +16,7 @@ namespace Stinger_Bug_Tracker
         public DashboardTester()
         {
             InitializeComponent();
+         
         }
 
         private void buttonSignout_Click(object sender, EventArgs e)
@@ -48,11 +49,15 @@ namespace Stinger_Bug_Tracker
             MySqlConnection conn = new MySqlConnection("server=localhost;port=3306;username=root;password=;database=stinger_users_db");
             DataTable dt = new DataTable();
 
-            MySqlDataAdapter SDA = new MySqlDataAdapter("SELECT * FROM tbl_members where id like " + int.Parse(textBoxSearch.Text), conn);
-            SDA.Fill(dt);
-
-            dataGridViewList.Show();
+            MySqlCommand SDA = new MySqlCommand("SELECT * FROM tbl_bugs where bug=@bug", conn);
+            SDA.Parameters.AddWithValue("@bug", textBoxSearch.Text);
+            conn.Open();
+            MySqlDataReader dr = SDA.ExecuteReader();
+            dt.Load(dr);
+            conn.Close();
             dataGridViewList.DataSource = dt;
+            dataGridViewList.Show();
+            
         }
 
         private void DashboardTester_Load(object sender, EventArgs e)

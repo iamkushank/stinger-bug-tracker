@@ -59,6 +59,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
             this.buttonSignout = new Stinger_Bug_Tracker.CircularButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -304,7 +305,7 @@
             this.dataGridViewList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewList.GridColor = System.Drawing.Color.Khaki;
-            this.dataGridViewList.Location = new System.Drawing.Point(386, 175);
+            this.dataGridViewList.Location = new System.Drawing.Point(387, 176);
             this.dataGridViewList.Name = "dataGridViewList";
             this.dataGridViewList.Size = new System.Drawing.Size(782, 486);
             this.dataGridViewList.TabIndex = 0;
@@ -445,6 +446,14 @@
             this.panel8.Size = new System.Drawing.Size(971, 159);
             this.panel8.TabIndex = 0;
             // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.Silver;
+            this.panel14.Location = new System.Drawing.Point(384, 181);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(1, 476);
+            this.panel14.TabIndex = 58;
+            // 
             // buttonSignout
             // 
             this.buttonSignout.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -464,6 +473,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(1181, 673);
+            this.Controls.Add(this.panel14);
             this.Controls.Add(this.panel12);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel10);
@@ -500,7 +510,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label labelDisplayID;
         private System.Windows.Forms.Label labelDisplayRole;
-        private System.Windows.Forms.Label labelDisplayUname;
         private System.Windows.Forms.PictureBox pictureBoxProfile;
         private System.Windows.Forms.DataGridView dataGridViewList;
         private System.Windows.Forms.Panel panel7;
@@ -524,6 +533,8 @@
         public System.Windows.Forms.Button buttonListBug;
         public System.Windows.Forms.Button buttonProject;
         public System.Windows.Forms.Button buttonManage;
+        private System.Windows.Forms.Panel panel14;
+        public System.Windows.Forms.Label labelDisplayUname;
 
     }
 }

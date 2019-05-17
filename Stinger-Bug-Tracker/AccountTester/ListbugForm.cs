@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AccessClassLibrary;
 
 namespace Stinger_Bug_Tracker
 {
     public partial class ListbugForm : Form
     {
+        ProjectClass pc = new ProjectClass();
+        BugClass bc = new BugClass();
+        FixbugClass fbc = new FixbugClass();
+
         public ListbugForm()
         {
             InitializeComponent();
@@ -79,17 +84,17 @@ namespace Stinger_Bug_Tracker
 
         private void buttonProjectid_Click(object sender, EventArgs e)
         {
-            
+            dataGridViewList.DataSource = pc.getallprojectbyid(Int32.Parse(textBoxProjectid.Text));
         }
 
         private void buttonBugid_Click(object sender, EventArgs e)
         {
-            
+            dataGridViewList.DataSource = bc.getallbugbyid(Int32.Parse(textBoxBugid.Text));
         }
 
         private void buttonSolutionid_Click(object sender, EventArgs e)
         {
-            
+            dataGridViewList.DataSource = fbc.getallsolutionbyid(Int32.Parse(textBoxSolutionid.Text));
         }
 
         private void buttonClose_Click(object sender, EventArgs e)

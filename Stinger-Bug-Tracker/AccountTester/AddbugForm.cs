@@ -15,23 +15,22 @@ namespace Stinger_Bug_Tracker
     public partial class AddbugForm : Form
     {
         BugClass bc = new BugClass();
+        ProjectClass pc = new ProjectClass();
         public AddbugForm()
         {
             InitializeComponent();
+            combProject.DataSource = pc.getallproject();
+            combProject.DisplayMember = "projectname";
+            combProject.ValueMember = "projectid";
         }
-
-        FileStream fs;
-        BinaryReader br;
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            string FileName = pictureBoxErrorSnapshot.Text;
-            byte[] ImageData;
-            fs = new FileStream(FileName, FileMode.Open, FileAccess.Read);
-            br = new BinaryReader(fs);
-            ImageData = br.ReadBytes((int)fs.Length);
-            br.Close();
-            fs.Close();
+            MemoryStream ms1 =new MemoryStream();
+            MemoryStream ms2 =new MemoryStream();
+            pictureBoxErrorSnapshot.Image.Save(ms1, System.Drawing.Imaging.ImageFormat.Jpeg);
+            byte[] ImageData = new byte[ms1.Length];
+            ms1.Read(ImageData, 0, ImageData.Length);
 
             bool res = bc.ManageBugs(0, dtpDate.Text, Int32.Parse(combProject.Text), Int32.Parse(txtBug.Text), txtClass.Text, txtRichCode.Text, txtMethod.Text, comboIdentify.Text, Int32.Parse(txtLinenumber.Text), txtClassLibrary.Text, ImageData, 1);
             if (res == true)
@@ -41,46 +40,6 @@ namespace Stinger_Bug_Tracker
             else
             {
                 MessageBox.Show("Failed to add the bug!!");
-            }
-        }
-
-        private void buttonUpdate_Click(object sender, EventArgs e)
-        {
-            string FileName = pictureBoxErrorSnapshot.Text;
-            byte[] ImageData;
-            fs = new FileStream(FileName, FileMode.Open, FileAccess.Read);
-            br = new BinaryReader(fs);
-            ImageData = br.ReadBytes((int)fs.Length);
-            br.Close();
-            fs.Close();
-            bool res = bc.ManageBugs(0, dtpDate.Text, Int32.Parse(combProject.Text), Int32.Parse(txtBug.Text), txtClass.Text, txtRichCode.Text, txtMethod.Text, comboIdentify.Text, Int32.Parse(txtLinenumber.Text), txtClassLibrary.Text, ImageData, 2);
-            if (res == true)
-            {
-                MessageBox.Show("Successfully updated the bugs!!");
-            }
-            else
-            {
-                MessageBox.Show("Failed to update!!");
-            }
-        }
-
-        private void buttonDelete_Click(object sender, EventArgs e)
-        {
-            string FileName = pictureBoxErrorSnapshot.Text;
-            byte[] ImageData;
-            fs = new FileStream(FileName, FileMode.Open, FileAccess.Read);
-            br = new BinaryReader(fs);
-            ImageData = br.ReadBytes((int)fs.Length);
-            br.Close();
-            fs.Close();
-            bool res = bc.ManageBugs(0, dtpDate.Text, Int32.Parse(combProject.Text), Int32.Parse(txtBug.Text), txtClass.Text, txtRichCode.Text, txtMethod.Text, comboIdentify.Text, Int32.Parse(txtLinenumber.Text), txtClassLibrary.Text, ImageData, 3);
-            if (res == true)
-            {
-                MessageBox.Show("Successfully deleted the bugs!!");
-            }
-            else
-            {
-                MessageBox.Show("Failed to delete the bugsn!!");
             }
         }
 

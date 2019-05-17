@@ -50,6 +50,7 @@ namespace Stinger_Bug_Tracker
             {
                 this.Hide();
                 DashboardTester dashboard = new DashboardTester();
+            //    dashboard.labelDisplayUname = textBoxUsername.Text;
                 dashboard.Show();
 
                 MessageBox.Show("Welecome Admin!!", "Administrator", MessageBoxButtons.OK, MessageBoxIcon.Information);

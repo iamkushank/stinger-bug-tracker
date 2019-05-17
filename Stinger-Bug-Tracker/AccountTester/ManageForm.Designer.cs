@@ -250,6 +250,7 @@
             this.buttonSearch.Size = new System.Drawing.Size(28, 28);
             this.buttonSearch.TabIndex = 62;
             this.buttonSearch.UseVisualStyleBackColor = false;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
             // ManageForm
             // 
