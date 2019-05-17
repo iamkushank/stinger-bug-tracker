@@ -12,17 +12,16 @@ namespace AccessClassLibrary
     {
         MySqlConnection cmd = new MySqlConnection(DB.connectionstring);
 
-        public bool ManageFixbug(int solutionid, string date, int projectid, int bugid, string Class, string code, string method, string classlibrary, int linenumber, string solvedby, byte[] error, int Mode)
+        public bool ManageFixbug(int solutionid, string date, string projectid, string bugid, string Class, string code, string method, string classlibrary, int linenumber, string solvedby, byte[] error, int Mode)
         {
+            bool result = false;
             try
             {
-
-                bool result = false;
                 string txtsql = "";
                 if (Mode == 1)
-                    txtsql = "Insert into tbl_solutions (solutionid, date, projectid, bugid, class, code, method, classlibrary, linenumber, solvedby, error) values (@sid, @date, @pid, @bid, @class, @code, @method, @clibrary, @linenumber, @solvedby, @error)";
+                    txtsql = "Insert into tbl_solutions (date, projectid, bugid, class, code, method, classlibrary, linenumber, solvedby, error) values (@sid, @date, @pid, @bid, @class, @code, @method, @clibrary, @linenumber, @solvedby, @error)";
                 if (Mode == 2)
-                    txtsql = "Update tbl_solutions set solutionid=@sid, date=@date, projectid=@pid, bugid=@bid, class=@class, code=@code, method=@method, classlibryary=@clibrary, linenumber=@lnumber, solvedby=@solvedby, error=@error,  where solutionid=@sid";
+                    txtsql = "Update tbl_solutions set date=@date, projectid=@pid, bugid=@bid, class=@class, code=@code, method=@method, classlibryary=@clibrary, linenumber=@lnumber, solvedby=@solvedby, error=@error where solutionid=@sid";
                 if (Mode == 3)
                     txtsql = "Delete from tbl_solutions where solutionid=@sid";
 
@@ -44,18 +43,16 @@ namespace AccessClassLibrary
                 cmd.Close();
                 if (x > 0)
                     result = true;
-                else
-                    result = false;
-                return result;
             }
             catch (Exception ex)
             {
-                throw ex;
+                Console.WriteLine(ex.Message);
             }
             finally
             {
                 cmd.Close();
             }
+            return result;
         }
 
         public DataTable getallsolution()

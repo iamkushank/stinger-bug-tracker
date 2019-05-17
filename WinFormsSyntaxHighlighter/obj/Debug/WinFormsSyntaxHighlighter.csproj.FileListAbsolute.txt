@@ -1,0 +1,34 @@
+C:\Users\Bunny\Source\Repos\WinFormsSyntaxHighlighter\WinFormsSyntaxHighlighter\bin\Debug\WinFormsSyntaxHighlighter.dll
+C:\Users\Bunny\Source\Repos\WinFormsSyntaxHighlighter\WinFormsSyntaxHighlighter\bin\Debug\WinFormsSyntaxHighlighter.pdb
+C:\Users\Bunny\Source\Repos\WinFormsSyntaxHighlighter\WinFormsSyntaxHighlighter\obj\Debug\WinFormsSyntaxHighlighter.csprojResolveAssemblyReference.cache
+C:\Users\Bunny\Source\Repos\WinFormsSyntaxHighlighter\WinFormsSyntaxHighlighter\obj\Debug\WinFormsSyntaxHighlighter.csproj.CoreCompileInputs.cache
+C:\Users\Bunny\Source\Repos\WinFormsSyntaxHighlighter\WinFormsSyntaxHighlighter\obj\Debug\WinFormsSyntaxHighlighter.dll
+C:\Users\Bunny\Source\Repos\WinFormsSyntaxHighlighter\WinFormsSyntaxHighlighter\obj\Debug\WinFormsSyntaxHighlighter.pdb
+C:\Users\Bunny\source\repos\bugtrackingsystem\BugTrackingSystem\WinFormsSyntaxHighlighter\bin\Debug\WinFormsSyntaxHighlighter.dll
+C:\Users\Bunny\source\repos\bugtrackingsystem\BugTrackingSystem\WinFormsSyntaxHighlighter\bin\Debug\WinFormsSyntaxHighlighter.pdb
+C:\Users\Bunny\source\repos\bugtrackingsystem\BugTrackingSystem\WinFormsSyntaxHighlighter\obj\Debug\WinFormsSyntaxHighlighter.csproj.CoreCompileInputs.cache
+C:\Users\Bunny\source\repos\bugtrackingsystem\BugTrackingSystem\WinFormsSyntaxHighlighter\obj\Debug\WinFormsSyntaxHighlighter.dll
+C:\Users\Bunny\source\repos\bugtrackingsystem\BugTrackingSystem\WinFormsSyntaxHighlighter\obj\Debug\WinFormsSyntaxHighlighter.pdb
+C:\Users\Bunny\source\repos\bugtrackingsystem\BugTrackingSystem\WinFormsSyntaxHighlighter\obj\Debug\WinFormsSyntaxHighlighter.csprojResolveAssemblyReference.cache
+D:\ASE Project\bugtrackingsystem\BugTrackingSystem\WinFormsSyntaxHighlighter\bin\Debug\WinFormsSyntaxHighlighter.dll
+D:\ASE Project\bugtrackingsystem\BugTrackingSystem\WinFormsSyntaxHighlighter\bin\Debug\WinFormsSyntaxHighlighter.pdb
+D:\ASE Project\bugtrackingsystem\BugTrackingSystem\WinFormsSyntaxHighlighter\obj\Debug\WinFormsSyntaxHighlighter.csprojResolveAssemblyReference.cache
+D:\ASE Project\bugtrackingsystem\BugTrackingSystem\WinFormsSyntaxHighlighter\obj\Debug\WinFormsSyntaxHighlighter.dll
+D:\ASE Project\bugtrackingsystem\BugTrackingSystem\WinFormsSyntaxHighlighter\obj\Debug\WinFormsSyntaxHighlighter.pdb
+D:\Bug Tracking\BugTrackingSystem\WinFormsSyntaxHighlighter\bin\Debug\WinFormsSyntaxHighlighter.dll
+D:\Bug Tracking\BugTrackingSystem\WinFormsSyntaxHighlighter\bin\Debug\WinFormsSyntaxHighlighter.pdb
+D:\Bug Tracking\BugTrackingSystem\WinFormsSyntaxHighlighter\obj\Debug\WinFormsSyntaxHighlighter.csprojAssemblyReference.cache
+D:\Bug Tracking\BugTrackingSystem\WinFormsSyntaxHighlighter\obj\Debug\WinFormsSyntaxHighlighter.csproj.CoreCompileInputs.cache
+D:\Bug Tracking\BugTrackingSystem\WinFormsSyntaxHighlighter\obj\Debug\WinFormsSyntaxHighlighter.dll
+D:\Bug Tracking\BugTrackingSystem\WinFormsSyntaxHighlighter\obj\Debug\WinFormsSyntaxHighlighter.pdb
+D:\British College\ASE\Bug Tracking app\Bug_Tracking_Application\WinFormsSyntaxHighlighter\bin\Debug\WinFormsSyntaxHighlighter.dll
+D:\British College\ASE\Bug Tracking app\Bug_Tracking_Application\WinFormsSyntaxHighlighter\bin\Debug\WinFormsSyntaxHighlighter.pdb
+D:\British College\ASE\Bug Tracking app\Bug_Tracking_Application\WinFormsSyntaxHighlighter\bin\Debug\BusinessLogicLayer.dll
+D:\British College\ASE\Bug Tracking app\Bug_Tracking_Application\WinFormsSyntaxHighlighter\bin\Debug\Data_Access_Layer.dll
+D:\British College\ASE\Bug Tracking app\Bug_Tracking_Application\WinFormsSyntaxHighlighter\bin\Debug\BusinessLogicLayer.pdb
+D:\British College\ASE\Bug Tracking app\Bug_Tracking_Application\WinFormsSyntaxHighlighter\bin\Debug\Data_Access_Layer.pdb
+D:\British College\ASE\Bug Tracking app\Bug_Tracking_Application\WinFormsSyntaxHighlighter\obj\Debug\WinFormsSyntaxHighlighter.csprojAssemblyReference.cache
+D:\British College\ASE\Bug Tracking app\Bug_Tracking_Application\WinFormsSyntaxHighlighter\obj\Debug\WinFormsSyntaxHighlighter.csproj.CoreCompileInputs.cache
+D:\British College\ASE\Bug Tracking app\Bug_Tracking_Application\WinFormsSyntaxHighlighter\obj\Debug\WinFormsSyntaxHighlighter.csproj.CopyComplete
+D:\British College\ASE\Bug Tracking app\Bug_Tracking_Application\WinFormsSyntaxHighlighter\obj\Debug\WinFormsSyntaxHighlighter.dll
+D:\British College\ASE\Bug Tracking app\Bug_Tracking_Application\WinFormsSyntaxHighlighter\obj\Debug\WinFormsSyntaxHighlighter.pdb

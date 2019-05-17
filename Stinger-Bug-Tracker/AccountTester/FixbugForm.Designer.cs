@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtClass = new System.Windows.Forms.TextBox();
-            this.txtBug = new System.Windows.Forms.TextBox();
             this.combProject = new System.Windows.Forms.ComboBox();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.labelClass = new System.Windows.Forms.Label();
@@ -52,6 +51,7 @@
             this.txtMethod = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBoxErrorSnapshot = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorSnapshot)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,14 +70,6 @@
             this.txtClass.Name = "txtClass";
             this.txtClass.Size = new System.Drawing.Size(200, 26);
             this.txtClass.TabIndex = 33;
-            // 
-            // txtBug
-            // 
-            this.txtBug.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBug.Location = new System.Drawing.Point(312, 141);
-            this.txtBug.Name = "txtBug";
-            this.txtBug.Size = new System.Drawing.Size(200, 26);
-            this.txtBug.TabIndex = 34;
             // 
             // combProject
             // 
@@ -291,6 +283,15 @@
             this.pictureBoxErrorSnapshot.TabIndex = 53;
             this.pictureBoxErrorSnapshot.TabStop = false;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(312, 141);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(200, 28);
+            this.comboBox1.TabIndex = 32;
+            // 
             // FixbugForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -312,7 +313,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtClass);
-            this.Controls.Add(this.txtBug);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.combProject);
             this.Controls.Add(this.dtpDate);
             this.Controls.Add(this.label4);
@@ -339,7 +340,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtClass;
-        private System.Windows.Forms.TextBox txtBug;
         private System.Windows.Forms.ComboBox combProject;
         private System.Windows.Forms.DateTimePicker dtpDate;
         private System.Windows.Forms.Label labelClass;
@@ -361,5 +361,6 @@
         private System.Windows.Forms.TextBox txtMethod;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBoxErrorSnapshot;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

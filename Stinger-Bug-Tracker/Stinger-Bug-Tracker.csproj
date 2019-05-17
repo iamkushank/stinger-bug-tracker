@@ -243,6 +243,10 @@
       <Project>{bf78177f-739d-4534-a700-b60dcede8e6e}</Project>
       <Name>AccessClassLibrary</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WinFormsSyntaxHighlighter\WinFormsSyntaxHighlighter.csproj">
+      <Project>{a84b044a-f5dd-4220-baff-a18f17585e31}</Project>
+      <Name>WinFormsSyntaxHighlighter</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\add-bug.png" />

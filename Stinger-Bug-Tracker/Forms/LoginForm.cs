@@ -45,12 +45,12 @@ namespace Stinger_Bug_Tracker
             //NewMethod(db);
 
             string role = uc.RoleBaseLogin(textBoxUsername.Text, textBoxPassword.Text);
-
+          
             if (role == "Admin")
             {
                 this.Hide();
                 DashboardTester dashboard = new DashboardTester();
-            //    dashboard.labelDisplayUname = textBoxUsername.Text;
+                dashboard.labelDisplayUname.Text = textBoxUsername.Text;
                 dashboard.Show();
 
                 MessageBox.Show("Welecome Admin!!", "Administrator", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -59,6 +59,7 @@ namespace Stinger_Bug_Tracker
             {
                 this.Hide();
                 DashboardTester dashboard = new DashboardTester();
+                dashboard.labelDisplayUname.Text = textBoxUsername.Text;
                 dashboard.buttonManage.Enabled = false;
                 dashboard.Show();
 
@@ -68,6 +69,7 @@ namespace Stinger_Bug_Tracker
             {
                 this.Hide();
                 DashboardTester dashboard = new DashboardTester();
+                dashboard.labelDisplayUname.Text = textBoxUsername.Text;
                 dashboard.buttonManage.Enabled = false;
                 dashboard.buttonProject.Enabled = false;
                 dashboard.buttonFixBug.Enabled = false;

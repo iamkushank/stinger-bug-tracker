@@ -12,22 +12,21 @@ namespace AccessClassLibrary
     {
         MySqlConnection cmd = new MySqlConnection(DB.connectionstring);
 
-        public bool ManageBugs(int bugid, string date, int projectid, string bug, string Class, string code, string method, string classlibrary, int linenumber, string identifiedby, byte[] error, int Mode)
+        public bool ManageBugs(String date, string projectid, string bug, string Class, string code, string method, string classlibrary, int linenumber, string identifiedby, byte[] error, int Mode)
         {
+            bool result = false;
             try
             {
-                bool result = false;
                 string txtsql = "";
                 if (Mode == 1)
-                    txtsql = "Insert into tbl_bugs (bugid, date, projectid, bug, class, code, method, classlibrary, linenumber, identifiedby, error) values (@bid, @date, @pid, @bug, @class, @code, @method, @clibrary, @linenumber, @identifiedby, @error)";
+                    txtsql = "Insert into tbl_bugs (date, projectname, bug, class, code, method, classlibrary, linenumber, identifiedby, error) values (@date, @pid, @bug, @class, @code, @method, @clibrary, @linenumber, @identifiedby, @error)";
                 if (Mode == 2)
-                    txtsql = "Update tbl_bugs set bugid=@bid, date=@date, projectid=@pid, bug=@bug, class=@class, code=@code, method=@method, classlibryary=@clibrary, linenumber=@lnumber, identifiedby=@identifiedby, error=@error,  where bugid=@bid";
+                    txtsql = "Update tbl_bugs set date=@date, projectid=@pid, bug=@bug, class=@class, code=@code, method=@method, classlibryary=@clibrary, linenumber=@lnumber, identifiedby=@identifiedby, error=@error,  where bugid=@bid";
                 if (Mode == 3)
                     txtsql = "Delete from tbl_bugs where bugid=@bid";
 
                 MySqlCommand sc = new MySqlCommand(txtsql, cmd);
                 sc.CommandType = CommandType.Text;
-                sc.Parameters.AddWithValue("@bid", bugid);
                 sc.Parameters.AddWithValue("@date", date);
                 sc.Parameters.AddWithValue("@pid", projectid);
                 sc.Parameters.AddWithValue("@bug", bug);
@@ -43,18 +42,16 @@ namespace AccessClassLibrary
                 cmd.Close();
                 if (x > 0)
                     result = true;
-                else
-                    result = false;
-                return result;
             }
             catch (Exception ex)
             {
-                throw ex;
+                Console.WriteLine(ex.Message);
             }
             finally
             {
                 cmd.Close();
             }
+            return result;
         }
 
         public DataTable getallbug()

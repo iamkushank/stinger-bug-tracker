@@ -26,3 +26,5 @@ D:\Road to victory\The British College\1st Semester\Advanced Software Engineerin
 D:\Road to victory\The British College\1st Semester\Advanced Software Engineering\Assignment\Stinger-Bug-Tracker\Stinger-Bug-Tracker\obj\Debug\Stinger_Bug_Tracker.aboutManage.resources
 D:\Road to victory\The British College\1st Semester\Advanced Software Engineering\Assignment\Stinger-Bug-Tracker\Stinger-Bug-Tracker\obj\Debug\Stinger_Bug_Tracker.aboutProject.resources
 D:\Road to victory\The British College\1st Semester\Advanced Software Engineering\Assignment\Stinger-Bug-Tracker\Stinger-Bug-Tracker\obj\Debug\Stinger_Bug_Tracker.aboutSearchbug.resources
+D:\Road to victory\The British College\1st Semester\Advanced Software Engineering\Assignment\Stinger-Bug-Tracker\Stinger-Bug-Tracker\bin\Debug\WinFormsSyntaxHighlighter.dll
+D:\Road to victory\The British College\1st Semester\Advanced Software Engineering\Assignment\Stinger-Bug-Tracker\Stinger-Bug-Tracker\bin\Debug\WinFormsSyntaxHighlighter.pdb

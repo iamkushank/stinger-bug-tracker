@@ -15,9 +15,18 @@ namespace Stinger_Bug_Tracker
     public partial class FixbugForm : Form
     {
         FixbugClass fbc = new FixbugClass();
+        ProjectClass pc = new ProjectClass();
+        BugClass bc = new BugClass();
         public FixbugForm()
         {
             InitializeComponent();
+            combProject.DataSource = pc.getallproject();
+            combProject.DisplayMember = "projectname";
+            combProject.ValueMember = "projectid";
+
+            comboBox1.DataSource = bc.getallbug();
+            comboBox1.DisplayMember = "bug";
+            comboBox1.ValueMember = "bugid";
         }
 
         private void buttonUpdate_Click(object sender, EventArgs e)
@@ -28,7 +37,7 @@ namespace Stinger_Bug_Tracker
             byte[] ImageData = new byte[ms1.Length];
             ms1.Read(ImageData, 0, ImageData.Length);
 
-            bool res = fbc.ManageFixbug(0, dtpDate.Text, Int32.Parse(combProject.Text), Int32.Parse(txtBug.Text), txtClass.Text, txtRichCode.Text, txtMethod.Text, comboSolved.Text, Int32.Parse(txtLinenumber.Text), txtClassLibrary.Text, ImageData, 2);
+            bool res = fbc.ManageFixbug(1, dtpDate.Text, combProject.Text, comboBox1.Text, txtClass.Text, txtRichCode.Text, txtMethod.Text, comboSolved.Text, Int32.Parse(txtLinenumber.Text), txtClassLibrary.Text, ImageData, 2);
             if (res == true)
             {
                 MessageBox.Show("Successfully updated the solutions!!");

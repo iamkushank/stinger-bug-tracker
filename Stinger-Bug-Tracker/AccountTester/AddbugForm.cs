@@ -28,11 +28,13 @@ namespace Stinger_Bug_Tracker
         {
             MemoryStream ms1 =new MemoryStream();
             MemoryStream ms2 =new MemoryStream();
-            pictureBoxErrorSnapshot.Image.Save(ms1, System.Drawing.Imaging.ImageFormat.Jpeg);
+            pictureBoxErrorSnapshot.Image.Save(ms1, System.Drawing.Imaging.ImageFormat.Png);
             byte[] ImageData = new byte[ms1.Length];
             ms1.Read(ImageData, 0, ImageData.Length);
 
-            bool res = bc.ManageBugs(0, dtpDate.Text, Int32.Parse(combProject.Text), txtBug.Text, txtClass.Text, txtRichCode.Text, txtMethod.Text, comboIdentify.Text, Int32.Parse(txtLinenumber.Text), txtClassLibrary.Text, ImageData, 1);
+           
+
+            bool res = bc.ManageBugs(dtpDate.Text, combProject.Text, txtBug.Text, txtClass.Text, txtRichCode.Text, txtMethod.Text, comboIdentify.Text, Int32.Parse(txtLinenumber.Text), txtClassLibrary.Text, ImageData, 1);
             if (res == true)
             {
                 MessageBox.Show("Successfully Added the bug!!");
@@ -57,6 +59,10 @@ namespace Stinger_Bug_Tracker
         private void buttonClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dtpDate_ValueChanged(object sender, EventArgs e)
+        {
         }
     }
 }

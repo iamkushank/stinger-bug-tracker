@@ -508,8 +508,6 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label labelDisplayID;
-        private System.Windows.Forms.Label labelDisplayRole;
         private System.Windows.Forms.PictureBox pictureBoxProfile;
         private System.Windows.Forms.DataGridView dataGridViewList;
         private System.Windows.Forms.Panel panel7;
@@ -535,6 +533,8 @@
         public System.Windows.Forms.Button buttonManage;
         private System.Windows.Forms.Panel panel14;
         public System.Windows.Forms.Label labelDisplayUname;
+        public System.Windows.Forms.Label labelDisplayRole;
+        public System.Windows.Forms.Label labelDisplayID;
 
     }
 }
