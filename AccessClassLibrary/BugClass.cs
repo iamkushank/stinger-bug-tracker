@@ -12,7 +12,7 @@ namespace AccessClassLibrary
     {
         MySqlConnection cmd = new MySqlConnection(DB.connectionstring);
 
-        public bool ManageBugs(int bugid, string date, int projectid, int bug, string Class, string code, string method, string classlibrary, int linenumber, string identifiedby, byte[] error, int Mode)
+        public bool ManageBugs(int bugid, string date, int projectid, string bug, string Class, string code, string method, string classlibrary, int linenumber, string identifiedby, byte[] error, int Mode)
         {
             try
             {

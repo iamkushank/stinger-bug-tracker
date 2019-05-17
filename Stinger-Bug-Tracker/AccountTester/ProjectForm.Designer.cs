@@ -112,18 +112,22 @@
             // 
             // dtpEnddate
             // 
+            this.dtpEnddate.CustomFormat = "yyyy-MM-dd";
             this.dtpEnddate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpEnddate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpEnddate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpEnddate.Location = new System.Drawing.Point(439, 218);
+            this.dtpEnddate.MinDate = new System.DateTime(1995, 1, 1, 0, 0, 0, 0);
             this.dtpEnddate.Name = "dtpEnddate";
             this.dtpEnddate.Size = new System.Drawing.Size(200, 26);
             this.dtpEnddate.TabIndex = 50;
             // 
             // dtpStartdate
             // 
+            this.dtpStartdate.CustomFormat = "yyyy-MM-dd";
             this.dtpStartdate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpStartdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpStartdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpStartdate.Location = new System.Drawing.Point(439, 167);
+            this.dtpStartdate.MinDate = new System.DateTime(1995, 1, 1, 0, 0, 0, 0);
             this.dtpStartdate.Name = "dtpStartdate";
             this.dtpStartdate.Size = new System.Drawing.Size(200, 26);
             this.dtpStartdate.TabIndex = 51;
@@ -195,6 +199,7 @@
             this.buttonSearch.Size = new System.Drawing.Size(28, 28);
             this.buttonSearch.TabIndex = 64;
             this.buttonSearch.UseVisualStyleBackColor = false;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
             // textBoxPidSearch
             // 

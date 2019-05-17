@@ -44,7 +44,7 @@ namespace Stinger_Bug_Tracker
             bool res = uc.ManageUser(0, textBoxFirstname.Text, textBoxlastname.Text, textBoxUsername.Text, textBoxPassword.Text, comboBoxRole.Text, 1);
             if (res == true)
             {
-                MessageBox.Show("A new user successfully added!!");
+                MessageBox.Show("A new user has successfully been added!!", "New user", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -57,7 +57,7 @@ namespace Stinger_Bug_Tracker
             bool res = uc.ManageUser(Int32.Parse(textBoxUidSearch.Text), textBoxFirstname.Text, textBoxlastname.Text, textBoxUsername.Text, textBoxPassword.Text, comboBoxRole.Text, 2);
             if (res == true)
             {
-                MessageBox.Show("Update successful!!");
+                DialogResult dr = MessageBox.Show("Are you sure you want to update user information?", "Update user", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             }
             else
             {
@@ -85,7 +85,12 @@ namespace Stinger_Bug_Tracker
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            
+            DataTable dt = uc.getallmemberbyid(Convert.ToInt32(textBoxUidSearch.Text));
+            textBoxFirstname.Text = dt.Rows[0]["firstname"].ToString();
+            textBoxlastname.Text = dt.Rows[0]["lastname"].ToString();
+            textBoxUsername.Text = dt.Rows[0]["username"].ToString();
+            textBoxPassword.Text = dt.Rows[0]["password"].ToString();
+            comboBoxRole.Text = dt.Rows[0]["role"].ToString();
         }
     }
 }

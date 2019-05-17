@@ -11,6 +11,7 @@ namespace AccessClassLibrary
     public class ProjectClass
     {
         MySqlConnection cmd = new MySqlConnection(DB.connectionstring);
+        //string formatForMySql = dtpStartdate.ToString("yyyy-MM-dd HH:mm:ss");
 
         public bool ManageProjects(int projectid, String projectname, String startdate, String enddate, String description, int Mode)
         {
@@ -67,7 +68,7 @@ namespace AccessClassLibrary
             try
             {
                 DataTable dt = new DataTable();
-                MySqlCommand com = new MySqlCommand("Select * from tbl_projects where projectid =@pid", cmd);
+                MySqlCommand com = new MySqlCommand("Select * from tbl_projects where projectid = @pid", cmd);
                 com.CommandType = CommandType.Text;
                 com.Parameters.AddWithValue("@pid", id);
                 cmd.Open();

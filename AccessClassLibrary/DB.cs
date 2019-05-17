@@ -13,11 +13,11 @@ namespace AccessClassLibrary
         { 
             get
             {
-                return "server=localhost;port=3306;username=root;password=;database=stinger_users_db";
+                return "server = localhost ; port = 3306; username = root; password =; database = stinger_users_db; pooling = false; convert zero datetime = True";
             }
         }
 
-        MySqlConnection connection = new MySqlConnection("server=localhost;port=3306;username=root;password=;database=stinger_users_db");
+        MySqlConnection connection = new MySqlConnection("server = localhost; port = 3306; username = root; password =; database = stinger_users_db; pooling = false; convert zero datetime = True");
 
         // function to open the connection
         public void openConnection()
