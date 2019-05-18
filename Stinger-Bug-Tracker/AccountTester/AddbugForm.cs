@@ -32,16 +32,14 @@ namespace Stinger_Bug_Tracker
             byte[] ImageData = new byte[ms1.Length];
             ms1.Read(ImageData, 0, ImageData.Length);
 
-           
-
             bool res = bc.ManageBugs(dtpDate.Text, combProject.Text, txtBug.Text, txtClass.Text, txtRichCode.Text, txtMethod.Text, comboIdentify.Text, Int32.Parse(txtLinenumber.Text), txtClassLibrary.Text, ImageData, 1);
             if (res == true)
             {
-                MessageBox.Show("Successfully Added the bug!!");
+                MessageBox.Show("Successfully Added the bug!!", "New bug", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Failed to add the bug!!");
+                MessageBox.Show("Failed to add new bug, please enter the correct values.", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

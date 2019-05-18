@@ -57,7 +57,6 @@ namespace Stinger_Bug_Tracker
             conn.Close();
             dataGridViewList.DataSource = dt;
             dataGridViewList.Show();
-            
         }
 
         private void DashboardTester_Load(object sender, EventArgs e)

@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardTester));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.labelDisplayID = new System.Windows.Forms.Label();
-            this.labelDisplayRole = new System.Windows.Forms.Label();
             this.labelDisplayUname = new System.Windows.Forms.Label();
             this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
             this.panel13 = new System.Windows.Forms.Panel();
@@ -74,8 +72,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.labelDisplayID);
-            this.panel1.Controls.Add(this.labelDisplayRole);
             this.panel1.Controls.Add(this.labelDisplayUname);
             this.panel1.Controls.Add(this.pictureBoxProfile);
             this.panel1.Controls.Add(this.panel13);
@@ -105,28 +101,6 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // labelDisplayID
-            // 
-            this.labelDisplayID.AutoSize = true;
-            this.labelDisplayID.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDisplayID.ForeColor = System.Drawing.Color.White;
-            this.labelDisplayID.Location = new System.Drawing.Point(162, 73);
-            this.labelDisplayID.Name = "labelDisplayID";
-            this.labelDisplayID.Size = new System.Drawing.Size(45, 17);
-            this.labelDisplayID.TabIndex = 6;
-            this.labelDisplayID.Text = "label4";
-            // 
-            // labelDisplayRole
-            // 
-            this.labelDisplayRole.AutoSize = true;
-            this.labelDisplayRole.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDisplayRole.ForeColor = System.Drawing.Color.White;
-            this.labelDisplayRole.Location = new System.Drawing.Point(104, 42);
-            this.labelDisplayRole.Name = "labelDisplayRole";
-            this.labelDisplayRole.Size = new System.Drawing.Size(53, 20);
-            this.labelDisplayRole.TabIndex = 6;
-            this.labelDisplayRole.Text = "label4";
             // 
             // labelDisplayUname
             // 
@@ -533,8 +507,6 @@
         public System.Windows.Forms.Button buttonManage;
         private System.Windows.Forms.Panel panel14;
         public System.Windows.Forms.Label labelDisplayUname;
-        public System.Windows.Forms.Label labelDisplayRole;
-        public System.Windows.Forms.Label labelDisplayID;
 
     }
 }

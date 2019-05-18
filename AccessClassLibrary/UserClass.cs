@@ -14,9 +14,9 @@ namespace AccessClassLibrary
         
         public bool ManageUser(int id, String firstname, String lastname, String username, String password, String role, int Mode)
         {
+            bool result = false;
             try
             {
-                bool result = false;
                 string txtsql = "";
                 if (Mode == 1)
                     txtsql = "Insert into tbl_members (firstname, lastname, username, password, role) values (@fn, @ln, @usn, @pass, @role)";
@@ -38,18 +38,16 @@ namespace AccessClassLibrary
                 cmd.Close();
                     if (x>0)
                         result = true;
-                    else
-                        result = false;
-                return result;
             }
             catch(Exception ex)
             {
-                throw ex;
+                Console.WriteLine(ex.Message);
             }
             finally
             {
                 cmd.Close();
             }
+            return result;
         }
 
         public bool Login(string username, string password)
@@ -99,7 +97,6 @@ namespace AccessClassLibrary
 
                 string role = dt.Rows[0]["role"].ToString();
                 return role;
-                
             }
             catch (Exception ex)
             {

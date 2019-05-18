@@ -41,9 +41,6 @@ namespace Stinger_Bug_Tracker
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            //DB db = new DB();
-            //NewMethod(db);
-
             string role = uc.RoleBaseLogin(textBoxUsername.Text, textBoxPassword.Text);
           
             if (role == "Admin")

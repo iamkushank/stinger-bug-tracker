@@ -40,11 +40,11 @@ namespace Stinger_Bug_Tracker
             bool res = fbc.ManageFixbug(1, dtpDate.Text, combProject.Text, comboBox1.Text, txtClass.Text, txtRichCode.Text, txtMethod.Text, comboSolved.Text, Int32.Parse(txtLinenumber.Text), txtClassLibrary.Text, ImageData, 2);
             if (res == true)
             {
-                MessageBox.Show("Successfully updated the solutions!!");
+                MessageBox.Show("Successfully updated the solutions!!", "New bug", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Failed to update!!");
+                MessageBox.Show("Failed to add new bug, please enter the correct values.", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
